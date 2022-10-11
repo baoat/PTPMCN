@@ -49,14 +49,13 @@
     </div>
     <div class="row footer2">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 footer2-1 ">
-            <p>
-                © 2021 Shopee. Tất cả các quyền được bảo lưu.
-            </p>
+            
+                © 2022 Sapo. Tất cả các quyền được bảo lưu.
+            
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 footer2-2">
-            <p style="width:186px;">
                 Quốc gia & Khu vực:
-            </p>
+            
             <ul class="navbar navbar-nav">
                 <li class="border-end"><a  href="#">Việt Nam</a>
                     <li class="border-end"><a href="#">Indonesia</a></li>
