@@ -22,6 +22,7 @@
 </head>
 <body>
     <?php
+        include("Connection/Connection.php");
         include("UserInterface/Header.php");
         include("UserInterface/Menu.php");
         include("UserInterface/Footer.php");
