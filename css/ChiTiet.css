@@ -1,0 +1,194 @@
+*{
+    margin:  0;
+    padding: 0;
+}
+
+.dat-mua a {
+    margin: 0 20px;
+}
+
+.san-pham-chi-tiet {
+    background: white;
+    margin: 0 10px;
+    padding-top: 13px;
+}
+
+.chitiet {width: 1200px;margin-left: auto;margin-right: auto;}
+
+.thanh-phan {margin: 20px;}
+
+.lien-quan {
+    margin-top: 13px;
+}
+
+.san-pham {
+    border-bottom: 1px solid black;
+}
+
+.san-pham a {
+    text-decoration: none;
+    color: black;
+}
+
+.ten-san-pham-lien-quan span {
+    font-size: 24px;
+}
+
+.img-san-pham-lien-quan img {
+    width: 100%;
+}
+
+.show-san-pham-lien-quan {
+    width: 100%;
+    padding: 0px 10px 0 10px;
+    background: white;
+}
+
+.san-pham-lien-quan span {
+    font-size: 25px;
+}
+
+.san-pham-lien-quan {
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 30px;
+    background: white;
+    margin: 0 0 13px 0;
+}
+
+.show-san-pham {
+    display: flex;
+}
+
+.thong-tin-san-pham-lien-quan {
+    width: 65%;
+}
+
+.img-san-pham-lien-quan {width: 12%;padding: 5px 15px 5px 14px;margin: 5px;display: flex;justify-content: center;align-items: center;}
+
+.dat-mua button {
+    margin: 0 20px 0 20px;
+}
+
+.dat-mua {}
+
+.mb-3 textarea {
+    width: 70%;
+}
+
+.chon-kich-ko button {
+    border: 1px solid black;
+    background: white;
+}
+
+.chon-kich-ko button:hover {
+    border: 1px solid #ffc107;
+    color: #ffc107;
+}
+
+.chon-kich-ko {
+    margin-left: 50px;
+}
+
+input.valuesoluong {
+    width: 30%;
+}
+
+.them i {color: black;}
+
+.giam i {
+    margin-left: 3px;
+    text-align: center;
+    color: black;
+}
+
+.chon-so-luong {
+    margin-left: 20px;
+}
+
+.dat-mua {
+    margin: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.ghi-chu {
+    margin: 15px 0 15px 0;
+}
+
+.danh-gia-san-pham {
+    margin: 15px 0 15px 0;
+}
+
+.gia-san-pham span {
+    margin-left: 100px;
+    font-size: 30px;
+    color: #ffc107;
+}
+
+.ten-san-pham span {
+    font-size: 45px;
+}
+
+a.them {
+    text-decoration: none;
+    border: 1px solid black;
+    background: white;
+    justify-content: center;
+    padding: 0 4px 0 4px;
+    color: black;
+    align-items: center;
+}
+
+a.giam {
+    justify-content: center;
+    border: 1px solid black;
+    margin-right: 5px;
+    background: white;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+.so-luong {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 15px 0;
+}
+
+.kich-ko {
+    display: flex;
+    margin: 15px 0 15px 0;
+    align-items: center;
+}
+
+.gia-san-pham {background: whitesmoke;height: 60px;width: 95%;display: flex;margin: 15px 0 15px 0;align-items: center;}
+
+.ten-san-pham {margin: 0px 0 15px 0;display: flex;align-items: center;}
+
+.img {
+    margin: 0 25px 0 25px;
+}
+
+img.img-1 {
+    width: 100%;
+}
+
+.flex {display: flex;}
+
+.chi-tiet-san-pham {
+    width: 65%;
+}
+
+.img-san-pham {
+    width: 35%;
+}
+
+.clearfix.header {
+    margin-top: 113px;
+}
