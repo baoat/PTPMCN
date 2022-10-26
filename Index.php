@@ -24,7 +24,7 @@
     <?php
         include("Connection/Connection.php");
         include("UserInterface/Header.php");
-        include("UserInterface/Menu.php");
+        include("ContactKhachHang.php");
         include("UserInterface/Footer.php");
     ?>
 </body>
