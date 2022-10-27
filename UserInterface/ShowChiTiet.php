@@ -12,7 +12,7 @@ $row = mysqli_fetch_array($query);
 		<div class=" flex san-pham-chi-tiet">
 			<div class="img-san-pham">
 				<div class="img">
-					<img src="<?php echo $row['anh'] ?>" class="img-1">
+					<img src="images/<?php echo $row['anh'] ?>" class="img-1">
 				</div>
 			</div>
 			<div class="chi-tiet-san-pham">
@@ -20,7 +20,9 @@ $row = mysqli_fetch_array($query);
 					<div class="ten-san-pham">
 						<span><?php echo $row['tensp'] ?></span>
 					</div>
-					
+					<div class="soluongton">
+						<span>Kho: <?php echo $row['soluongton'] ?></span>
+					</div>	
 					<div class="gia-san-pham">
 						<?php $_SESSION['giaban'] = $row['giaban']; ?>
 						<span><?php echo $row['giaban']; ?>đ</span>
@@ -133,56 +135,56 @@ $row = mysqli_fetch_array($query);
 				<div class="san-pham-lien-quan">
 					<span>SẢN PHẨM LIÊN QUAN</span>
 				</div>
-				<!-- <div class="show-san-pham-lien-quan">
+				<div class="show-san-pham-lien-quan">
 					<?php
-					$sql_sanphamlienquan = "SELECT * FROM sanpham WHERE id_loainuoc = '".$row['id_loainuoc']."'";
+					$sql_sanphamlienquan = "SELECT * FROM sanpham WHERE maloaisp = '".$row['maloaisp']."'";
 					$query_sanphamlienquan = mysqli_query($conn, $sql_sanphamlienquan);
 					while($row_sanphamlienquan = mysqli_fetch_array($query_sanphamlienquan))
 					{
 						?>
 						<div class="san-pham">
-							<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanphamlienquan['id_sanpham'] ?>">
+							<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanphamlienquan['masp'] ?>">
 								<div class="show-san-pham">
 									<div class="img-san-pham-lien-quan">
-										<img src="<?php echo $row_sanphamlienquan['hinhanh'] ?>" width="100px" height="100px">
+										<img src="images/<?php echo $row_sanphamlienquan['anh'] ?>" width="100px" height="100px">
 									</div>
 									<div class="thong-tin-san-pham-lien-quan">
 										<div class="ten-san-pham-lien-quan">
-											<span><?php echo $row_sanphamlienquan['tensanpham'] ?></span>
+											<span><?php echo $row_sanphamlienquan['tensp'] ?></span>
 										</div>
 										<div class="danh-gia-san-pham-lien-quan">
 											<?php
-											$sql_danhgia_splq = "SELECT * FROM danhgia WHERE id_sanpham = '".$row_sanphamlienquan['id_sanpham']."'";
-											$querr_danhgia_splq = mysqli_query($conn, $sql_danhgia_splq);
-											$tong_gia_tri_splq = 0;
-											$count_splq = 0;
-											while ($row_danhgia_splq = mysqli_fetch_array($querr_danhgia_splq)) {
-												$tong_gia_tri_splq += $row_danhgia_splq['danhgia'];
-												$count_splq ++;
-											}
-											$rating_splq = $tong_gia_tri_splq/$count_splq;
-											$rating_splq = round($rating_splq);
-											?>
-											<ul class="list-inline rating" title="Average Rating">
-												<?php 
-												for ($i=1; $i <= 5; $i++) { 
-													if($i<=$rating_splq)
-													{
-														$color = 'color:#ffcc00;';
-													}else{
-														$color = 'color:#ccc;';
-													}
-													?>
-													<li style="cursor:pointer;<?php echo $color; ?> font-size: 30px;">
-														&#9733;
-													</li>
-													<?php
-												}
+											// $sql_danhgia_splq = "SELECT * FROM danhgia WHERE id_sanpham = '".$row_sanphamlienquan['id_sanpham']."'";
+											// $querr_danhgia_splq = mysqli_query($conn, $sql_danhgia_splq);
+											// $tong_gia_tri_splq = 0;
+											// $count_splq = 0;
+											// while ($row_danhgia_splq = mysqli_fetch_array($querr_danhgia_splq)) {
+											// 	$tong_gia_tri_splq += $row_danhgia_splq['danhgia'];
+											// 	$count_splq ++;
+											// }
+											// $rating_splq = $tong_gia_tri_splq/$count_splq;
+											// $rating_splq = round($rating_splq);
+											// ?>
+											 <ul class="list-inline rating" title="Average Rating">
+											 	<?php 
+											// 	for ($i=1; $i <= 5; $i++) { 
+											// 		if($i<=$rating_splq)
+											// 		{
+											// 			$color = 'color:#ffcc00;';
+											// 		}else{
+											// 			$color = 'color:#ccc;';
+											// 		}
+											// 		?>
+											 		<!-- <li style="cursor:pointer;<?php echo $color; ?> font-size: 30px;">
+											 			&#9733;
+											 		</li> -->
+											 		<?php
+											// 	}
 												?>
 											</ul>
 										</div>
 										<div class="gia-san-pham-lien-quan">
-											<span><?php echo $row_sanphamlienquan['dongia'] ?>.000đ</span>
+											<span><?php echo $row_sanphamlienquan['giaban'] ?>đ</span>
 										</div>
 									</div>
 								</div>
@@ -193,7 +195,7 @@ $row = mysqli_fetch_array($query);
 					?>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </div>
 

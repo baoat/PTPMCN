@@ -10,7 +10,7 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img height="300" src="" class="d-block w-100" >
+                  <img height="300" src="https://i.imgur.com/jn0u6q8.png" class="d-block w-100" >
                 </div>
                 <div class="carousel-item">
                   <img height="300" src="" class="d-block w-100">
@@ -51,7 +51,9 @@
                 </div>
                 <div class="row danhmuc-menu">
                     <?php
-                        for ($i=0; $i < 10; $i++) { 
+                      $query="select * from hangsanpham";
+                      $run = mysqli_query($conn, $query);
+                      while ($row=mysqli_fetch_assoc($run)) {
                             ?>
                             <div class="show-danhmuc-menu">
                                     <a href="">
@@ -60,13 +62,13 @@
                                                 <img class="logo-menu" src=""/>
                                             </div>
 
-                                            <div class="name-danhmuc-menu"><strong>Ten danh muc</strong></div>
+                                            <div class="name-danhmuc-menu"><strong><?php echo $row['tenhangsp'] ?></strong></div>
                                         </div>
 
                                     </a>
                                 </div>
                             <?php
-                        }
+                      }
                     ?>
                                 
                 </div>

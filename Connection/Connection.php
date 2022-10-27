@@ -1,6 +1,6 @@
 <?php
 	//Kết nối đến CSDL mySql
-	$conn = mysqli_connect ("localhost", "root", "", "csdlwebdogiadung") or die("Không kết nối được với CSDL");
+	$conn = mysqli_connect ("localhost", "root", "", "webdogiadung") or die("Không kết nối được với CSDL");
 	// Check connection
 if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();

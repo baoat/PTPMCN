@@ -22,7 +22,7 @@
 				<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row['masp'] ?>">
 					<div class="show-sanpham-1">
 						<div class="img-show-sanpham">
-							<img src="<?php echo $row['anh'] ?>" />
+							<img src="images/<?php echo $row['anh'] ?>" />
 						</div>
 						<div class="name-show-sanpham">
 							<p style="color: black; margin-top:5px;"><strong><?php echo $row['tensp'] ?></strong></p>
