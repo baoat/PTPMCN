@@ -29,6 +29,7 @@ $row = mysqli_fetch_array($query);
 					</div>
 					<div class="thanh-phan">
 						<div class="chi-tiet-thanh-phan">
+							<div><span>Mô tả: </span></div>
 							<span><?php echo $row['mota'] ?></span>
 						</div>
 					</div>

@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.camon-title {
+    display: flex;
+    justify-content: center;
+}
+
+.camon-title img {
+    width: 450px;
+}
+
+body {
+    /* background-color: white; */
+    min-width: 1404px;
+}
+
+.clearfix.camon {
+    margin-top: 160px;
+    text-align: center;
+}
+
+.back {
+    width: 87%;
+    text-align: right;
+}
+
+.row.hoanthanh {
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-hoanthanh {
+    width: 11%;
+    float: right;
+    margin-right: 20px;
+}
+
+.mb-3.password {
+    width: 50%;
+}
+
+.mb-3.tennguoinhan {
+    width: 50%;
+}
+
+.btn-thanhtoan {
+    width: 10%;
+}
+
+.show-thanhtien {
+    width: 90%;
+    text-align: right;
+}
+
+.giohang-thanhtien span {
+    text-align: right;
+}
+
+.row.giohang-thanhtien {
+    background-color: white;
+    margin-top: 25px;
+    align-items: center;
+    height: 55px;
+}
+
+i.fas.fa-plus {
+    padding: 0 4px 0 5px;
+}
+
+
+.giohang-sanpham a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.row.giohang-sanpham {
+    background-color: white;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.thaotac {
+    width: 6.70417%;
+    text-align: center;
+}
+
+.sotien {
+    width: 10.43557%;
+    text-align: center;
+}
+
+.soluong {
+    width: 15.4265%;
+    text-align: center;
+}
+
+.Dongia {
+    text-align: center;
+    width: 15.88022%;
+}
+
+.sanpham {
+    width: 46.27949%;
+    color: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    width: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.check {}
+
+.row.giohang-title {
+    height: 55px;
+    background: white;
+    align-items: center;
+}
+
+.clearfix.giohang {
+    margin-top: 160px;
+}
+.clearfix.thanhtoan{
+    margin-top: 160px;
+}
+a.them {
+    width: 25%;
+    /* height: 30px; */
+    background: white;
+    align-items: center;
+    border: 1px solid;
+    margin-left: 2.5px;
+    display: flex;
+    justify-content: center;
+}
+
+input.valuesoluong {
+    width: 50%;
+    /* height: 30px; */
+    text-align: center;
+    margin: 0;
+}
+
+.input-soluong {display: flex;align-items: center;width: 100%;}
+
+a.giam {
+    width: 25%;
+    /* height: 30px; */
+    background: white;
+    align-items: center;
+    border: 1px solid;
+    margin-right: 3px;
+    display: flex;
+    padding-right: 8px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+i.fas.fa-minus {
+    text-align: center;
+    padding-left: 3px;
+}
