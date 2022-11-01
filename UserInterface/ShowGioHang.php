@@ -62,7 +62,7 @@
                         </div>
                         <div class="sotien">
                             <?php
-                                echo $row ['giaban']
+                                echo number_format($row ['giaban']) 
                              ?>
                         </div>
                         <div class="thaotac">
@@ -84,7 +84,7 @@
                 <?php
                 //$_SESSION['thanhtien'] = $thanhtien;
                 ?> 
-                <span><strong>Tổng thanh toán: </strong><span class="text-warning" style="font-size: 25px;"><?php echo $row['giaban'] ?></span></span>
+                <span><strong>Tổng thanh toán: </strong><span class="text-warning" style="font-size: 25px;"><?php echo number_format($row['giaban'])  ?></span></span>
             </div>
 
             <div class="btn-thanhtoan">

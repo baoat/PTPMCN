@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
   
 
-    <title>Trang ADMIN | </title>
+    <title>Trang ADMIN </title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,116 +37,14 @@
   </head>
 
   <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>SAPO.vn</span></a>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Xin Chào,</span>
-                <h2>ADMIN</h2>
-              </div>
-            </div>
-            <!-- /menu profile quick info -->
-
-            <br />
-
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home  <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.php"> Trang Chủ </a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-edit"></i> Quản Lý <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="formquanlyhanghoa.php">Quản Lý Hàng Hoá</a></li>
-                      <li><a href="formquanlykhach.php">Quản Lý Khách</a></li>
-                      <li><a href="formquanlyhoadon.php">Quản Lý Hoá Đơn</a></li>
-                      <li><a href="form_wizards.html">chờ thêm chức năng mới</a></li>
-                      <li><a href="form_upload.html">chờ thêm chức năng mới</a></li>
-                      <li><a href="form_buttons.html">chờ thêm chức năng mới</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="phanhoikhachhang.php">Phản hồi của khách hàng</a></li>
-                      <li><a href="tables_dynamic.html">chờ thêm chức năng mới</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> chờ thêm chức năng <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="chartjs.html">chờ thêm chức năng mới</a></li>
-                      <li><a href="chartjs2.html">chờ thêm chức năng mới</a></li>
-                      <li><a href="morisjs.html">chờ thêm chức năng mới</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-
-            <!-- /menu footer buttons -->
-          </div>
-        </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-              <nav class="nav navbar-nav">
-              <ul class=" navbar-right">
-                <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">ADMIN
-                  </a>
-                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Thoát </a>
-                  </div>
-                </li>
-
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-            <div class="title_left">
-                <h3>Chào Mừng Đến Với Bình Nguyên Vô Tận</h3>
-            </div>
-        </div>
-             
-        <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Trang Web bán hàng uy tín nhất vinh bắc bộ
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
+        <?php
+          include("../Connection/Connection.php");
+          include("AdminInterface/HeaderAdmin.php");
+          include("ContactAdmin.php");
+          include("AdminInterface/FooterAdmin.php");
+        ?>
 
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>

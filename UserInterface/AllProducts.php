@@ -28,7 +28,7 @@
 							<p style="color: black; margin-top:5px;"><strong><?php echo $row['tensp'] ?></strong></p>
 						</div>
 						<div class="gia-show-sanpham">
-							<p style=" margin-top:5px;"><?php echo $row['giaban'] ?></p>
+							<p style=" margin-top:5px;"><?php echo number_format($row['giaban']) ?>VNĐ</p>
 						</div>
 						<div class="timkiem-lienquan">
                             <a>Tìm kiếm liên quan</a>

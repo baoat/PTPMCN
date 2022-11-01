@@ -6,11 +6,8 @@ if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	exit;
   }
-  
-  echo "Initial character set is: " . mysqli_character_set_name($conn);
+   mysqli_character_set_name($conn);
   
   // Change character set to utf8
-  mysqli_set_charset($conn,"utf8");
-  
-  echo "Current character set is: " . mysqli_character_set_name($conn);
+  mysqli_set_charset($conn,"utf8"); mysqli_character_set_name($conn);
 ?>
