@@ -10,14 +10,14 @@
 
 	if($hienthiIndex == 'thongtinkhachhang')
 	{
-		include('UserInterface/ThongTinKhachHang.php');
+		include('ThongTinKhachHang.php');
 	}
 	elseif($hienthiIndex == 'doimatkhau')
 	{
-		include('UserInterface/DoiMatKhau.php');
+		include('DoiMatKhau.php');
 	}
 	else
 	{
-		include('UserInterface/Menu.php');
+		include('Menu.php');
 	}
 ?>
