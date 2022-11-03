@@ -32,7 +32,7 @@ $row = mysqli_fetch_array($query);
 						<p><strong><?php echo $row['mota'] ?></strong></p>
 					</div>
 					<div class="dat-mua">
-                        <a class="btn btn-warning">Them gio hang</a>
+					<a href="GioHang.php?show=giohang&giohang=<?php echo $row['masp'] ?>" class="btn btn-warning">Thêm vào giỏ hàng</a>
 						<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#muangay">Mua ngay</button>
 					</div>
 				</div>
