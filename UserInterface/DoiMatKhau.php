@@ -5,37 +5,6 @@
 				<strong>Đổi mật khẩu</strong>
 			</div>
 		</div>
-		<?php
-		// $id = $_SESSION['ma_khachhang'];
-		// $sql = "SELECT * FROM tkkhachhang WHERE ma_khachhang = '".$id."'";
-		// $run = mysqli_query($conn, $sql);
-		// $row = mysqli_fetch_array($run);
-		// 	if(!empty($_POST))
-		// 	{
-		// 		$passnow = $_POST['passnow'];
-		// 		$passnew = $_POST['passnew'];
-		// 		$passr = $_POST['passr'];
-
-		// 		if($passnow == $row['password'])
-		// 		{
-		// 			if($passnew == $passr)
-		// 			{
-		// 				$sql_up = "UPDATE tkkhachhang SET password = '$passnew' WHERE ma_khachhang ='".$id."'";
-		// 				mysqli_query($conn, $sql_up);
-		// 				echo "Đổi mật khẩu thành công.";
-		// 				header('location: Index.php?showIndex=doimatkhau');
-		// 			}
-		// 			else
-		// 			{
-		// 				echo "Mật khẩu không khớp.";
-		// 			}
-		// 		}
-		// 		else
-		// 		{
-		// 			echo "Mật khẩu sai";
-		// 		}
-		// 	}
-		?>
 		<form action="" method="POST">
 			<div class="doi-mat-khau">
 				<div class="mat-khau-new">

@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/UserInterface.css">
+    <link rel="stylesheet" href="css/StyleUserInterface.css">
     <!-- jQuery -->
 	<script src="//code.jquery.com/jquery.js"></script>
 	<!-- Bootstrap JavaScript -->
@@ -24,7 +24,7 @@
     <?php
         include("Connection/Connection.php");
         include("UserInterface/Header.php");
-        include("ContactKhachHang.php");
+        include("UserInterface/ContactKhachHang.php");
         include("UserInterface/Footer.php");
     ?>
 </body>

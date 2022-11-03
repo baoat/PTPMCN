@@ -8,6 +8,7 @@
 		{
 			$hienthiSanpham = '';
 		}
+<<<<<<< HEAD
 		// if($hienthiSanpham == 'phantrangloai')
 		// {
 		// 	include("AllSanphamLoai.php");
@@ -22,4 +23,7 @@
 		{
 			include("AllProducts.php");
 		}
+=======
+			include("AllProducts.php");
+>>>>>>> d952015609277676972e069e816e2df6658a9c3c
 	?>
