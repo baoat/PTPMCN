@@ -15,11 +15,11 @@
 		// elseif ($hienthiSanpham == 'dangxuat') {
 		// 	include("MainGiaoDien/Dangxuat.php");
 		// }
-		// elseif ($hienthiSanpham == "sanphamtimkiem") {
-		// 	include("AllSanphamTimkiem.php");
-		// }
-		// else
-		//{
+		 if ($hienthiSanpham == "sanphamtimkiem") {
+			include("AllSanphamTimkiem.php");
+		 }
+		else
+		{
 			include("AllProducts.php");
-		//}
+		}
 	?>

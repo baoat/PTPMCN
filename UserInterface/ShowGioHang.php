@@ -49,13 +49,13 @@
                         </div>
                         <div class="soluong">
                             <div class="input-soluong">
-                                <a href="GioHang.php?show=update&minus=<?=$key?>" class="giam">
+                                <a href="GioHang.php" class="giam">
                                     <i class="fas fa-minus"></i>
                                 </a>
                                 <input type="text" class="valuesoluong" value=" 1 <?php
                                 //echo number_format($value['soluong'])
                                 ?>" />
-                                <a href="GioHang.php?show=update&plus=<?=$key?>" class="them">
+                                <a href="GioHang.php" class="them">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
