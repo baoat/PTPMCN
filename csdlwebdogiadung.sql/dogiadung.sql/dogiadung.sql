@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 27, 2022 lúc 12:47 AM
--- Phiên bản máy phục vụ: 5.7.31
--- Phiên bản PHP: 7.3.21
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 08, 2022 at 08:58 AM
+-- Server version: 5.7.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `csdlwebdogiadung`
+-- Database: `dogiadung`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chitietdonhang`
+-- Table structure for table `chitietdonhang`
 --
 
 DROP TABLE IF EXISTS `chitietdonhang`;
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `chitietdonhang` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `feedback`
+-- Table structure for table `feedback`
 --
 
 DROP TABLE IF EXISTS `feedback`;
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `feedback` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hangsanpham`
+-- Table structure for table `hangsanpham`
 --
 
 DROP TABLE IF EXISTS `hangsanpham`;
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `hangsanpham` (
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hangsanpham`
+-- Dumping data for table `hangsanpham`
 --
 
 INSERT INTO `hangsanpham` (`mahangsp`, `tenhangsp`, `maloaisp`) VALUES
@@ -92,7 +92,7 @@ INSERT INTO `hangsanpham` (`mahangsp`, `tenhangsp`, `maloaisp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hinhanh`
+-- Table structure for table `hinhanh`
 --
 
 DROP TABLE IF EXISTS `hinhanh`;
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `hinhanh` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoadon`
+-- Table structure for table `hoadon`
 --
 
 DROP TABLE IF EXISTS `hoadon`;
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `hoadon` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaisanpham`
+-- Table structure for table `loaisanpham`
 --
 
 DROP TABLE IF EXISTS `loaisanpham`;
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `loaisanpham` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loaisanpham`
+-- Dumping data for table `loaisanpham`
 --
 
 INSERT INTO `loaisanpham` (`maloaisp`, `tenloaisp`) VALUES
@@ -151,7 +151,7 @@ INSERT INTO `loaisanpham` (`maloaisp`, `tenloaisp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 DROP TABLE IF EXISTS `sanpham`;
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `sanpham` (
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`masp`, `tensp`, `giaban`, `mota`, `soluongton`, `mahang`, `maloaisp`, `anh`) VALUES
@@ -195,7 +195,7 @@ INSERT INTO `sanpham` (`masp`, `tensp`, `giaban`, `mota`, `soluongton`, `mahang`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 DROP TABLE IF EXISTS `user`;
@@ -206,44 +206,59 @@ CREATE TABLE IF NOT EXISTS `user` (
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `diachi` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ngaysinh` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gioitinh` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `sodienthoai` (`sodienthoai`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `sodienthoai`, `name`, `password`, `diachi`, `ngaysinh`, `gioitinh`) VALUES
-(1, 'aaa@gmail.com', '0123456789', 'Vũ Văn Phước', '99999', 'aaa', '2022-10-16 08:11:44', '');
+INSERT INTO `user` (`id`, `email`, `sodienthoai`, `name`, `password`, `diachi`, `gioitinh`) VALUES
+(1, 'aaa@gmail.com', '0123456789', 'Vũ Văn Phước', '99999', 'aaa', ''),
+(2, 'ssdsgd@gmail.com', '98989898', 'Vũ Văn Phước', '99999', 'fgffgfg', 'nam'),
+(3, 'asd@gmail.com', '56565656', 'Vũ Văn Phước', '99999', 'rerere', 'nam');
+
+-- --------------------------------------------------------
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Table structure for table `useradmin`
+--
+
+DROP TABLE IF EXISTS `useradmin`;
+CREATE TABLE IF NOT EXISTS `useradmin` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `hangsanpham`
+-- Constraints for table `hangsanpham`
 --
 ALTER TABLE `hangsanpham`
   ADD CONSTRAINT `hangsanpham_ibfk_1` FOREIGN KEY (`maloaisp`) REFERENCES `loaisanpham` (`maloaisp`);
 
 --
--- Các ràng buộc cho bảng `hinhanh`
+-- Constraints for table `hinhanh`
 --
 ALTER TABLE `hinhanh`
   ADD CONSTRAINT `hinhanh_ibfk_1` FOREIGN KEY (`masp`) REFERENCES `sanpham` (`masp`);
 
 --
--- Các ràng buộc cho bảng `hoadon`
+-- Constraints for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD CONSTRAINT `hoadon_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
 
 --
--- Các ràng buộc cho bảng `sanpham`
+-- Constraints for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `sanpham_ibfk_1` FOREIGN KEY (`mahang`) REFERENCES `hangsanpham` (`mahangsp`),

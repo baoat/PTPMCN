@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/UserInterface.css">
+    <link rel="stylesheet" href="css/StyleUserInterface.css">
     <link rel="stylesheet" href="css/StyleGioHang.css">
     <!-- jQuery -->
 	<script src="//code.jquery.com/jquery.js"></script>
@@ -25,9 +25,9 @@
     <?php
         include("Connection/Connection.php");
         include("UserInterface/Header.php");
-        
+        include("UserInterface/ContactGioHang.php");
         include("UserInterface/Footer.php");
-        include("UserInterface/ShowGioHang.php");
+        
     ?>
 </body>
 </html>

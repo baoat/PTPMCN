@@ -1,5 +1,9 @@
 <?php
-session_start();
+	ob_start();
+	if(!isset($_SESSION))
+	{
+		session_start();
+	}
 ?>
 <?php
 	//Lấy giá trị của masp của $_GET['giohang'] gán cho $id
@@ -21,14 +25,14 @@ session_start();
 			$_SESSION['cart'][$id]['tensp'] = $row['tensp'];
 			$_SESSION['cart'][$id]['giaban'] = $row['giaban'];
 
-			header('location:GioHang.php?show=showgiohang'); exit();
+			header('location:GioHang.php?show= '); exit();
 		
 		}else
 		{
 				$_SESSION['cart'][$id]['soluong'] = 1;
 				$_SESSION['cart'][$id]['tensp'] = $row['tensp'];
 				$_SESSION['cart'][$id]['giaban'] = $row['giaban'];
-			header('location:GioHang.php?show=showgiohang'); exit();
+			('location:GioHang.php?show=showgiohang'); exit();
 		}
 	}
 ?>

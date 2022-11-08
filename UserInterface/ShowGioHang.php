@@ -4,16 +4,16 @@ if(!isset($_SESSION))
 {
     session_start();
 }
-// if(isset($_SESSION['login']))
-// {
+if(isset($_SESSION['login']))
+{
 ?>
     <div class="clearfix giohang">
         <div class="container container-fluid">
             <?php
             $thanhtien = 0;
             $tongtien =0;
-            // if(isset($_SESSION['cart']) && $_SESSION['number_cart'] != 0)
-            // {
+            if(isset($_SESSION['cart']) && $_SESSION['number_cart'] != 0)
+            {
                 ?>
                 <div class="row giohang-title">
                     <div class="check">
@@ -48,7 +48,7 @@ if(!isset($_SESSION))
                             <input type="checkbox" />
                         </div>
                         <div class="sanpham">
-                            <a href=""><img src="<?php echo $row['anh'] ?>" width="80" height="80" /></a>
+                            <a href=""><img src="images/<?php echo $row['anh'] ?>" width="80" height="80" /></a>
                             <a href=""><?php echo $row['tensp'] ?></a>
                         </div>
                         <div class="Dongia">
@@ -59,15 +59,8 @@ if(!isset($_SESSION))
                                 <a href="GioHang.php" class="giam">
                                     <i class="fas fa-minus"></i>
                                 </a>
-<<<<<<< HEAD
-                                <input type="text" class="valuesoluong" value=" 1 <?php
-                                //echo number_format($value['soluong'])
-                                ?>" />
-                                <a href="GioHang.php" class="them">
-=======
                                 <input type="text" class="valuesoluong" value="<?php echo number_format($value['soluong'])?>" />
                                 <a href="GioHang.php?show=update&plus=<?=$key?>" class="them">
->>>>>>> e6e1bd2b78939dbf608a0fd3875fd42f70e82eec
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -127,28 +120,28 @@ if(!isset($_SESSION))
         </div>
     </div>
     <?php
-// }
-// else
-// {
+}
+else
+{
     ?>
-    <!-- <div class="row giohang-trong">
+    <div class="row giohang-trong">
         <div class="text-center">
             <img src="https://drive.gianhangvn.com/image/empty-cart.jpg" class="img-fluid" width="250" height="250" />
             <p><h5><strong>Giỏ hàng của bạn còn trống</strong></h5></p>
             <a href="Index.php" class="btn btn-warning">Mua hàng ngay</a>
         </div>
-    </div> -->
+    </div>
     <?php
-// }
+}
 ?>
 </div>
 </div>
 <?php
-// }
-// else
-// {
-//     header('location: Login.php');
-// }
+}
+else
+{
+    header('location: Login.php');
+}
 ?>
 
 
