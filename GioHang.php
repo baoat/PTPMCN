@@ -25,9 +25,9 @@
     <?php
         include("Connection/Connection.php");
         include("UserInterface/Header.php");
-        include("UserInterface/ShowGioHang.php");
-        include("UserInterface/Footer.php");
         
+        include("UserInterface/Footer.php");
+        include("UserInterface/ShowGioHang.php");
     ?>
 </body>
 </html>

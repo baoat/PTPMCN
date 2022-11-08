@@ -1,15 +1,19 @@
 <?php
-// ob_start();
-// if(!isset($_SESSION))
-// {
-//     session_start();
-// }
+ob_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
 // if(isset($_SESSION['login']))
 // {
 ?>
     <div class="clearfix giohang">
         <div class="container container-fluid">
             <?php
+            $thanhtien = 0;
+            $tongtien =0;
+            // if(isset($_SESSION['cart']) && $_SESSION['number_cart'] != 0)
+            // {
                 ?>
                 <div class="row giohang-title">
                     <div class="check">
@@ -32,38 +36,44 @@
                     </div>
                 </div>
                 <?php
-                        $mysql = "SELECT * FROM sanpham WHERE masp = '2'";
-                        $run = mysqli_query($conn, $mysql);
-                        $row = mysqli_fetch_array($run);
+                foreach ($_SESSION['cart'] as $key => $value) {
+                    $sql = "SELECT * FROM sanpham WHERE masp = '".$key."'";
+                    $run = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_array($run);
+                    $tongtien = $value['soluong'] * $row['giaban'];
+                    $thanhtien += $tongtien;
                     ?>
                     <div class="row giohang-sanpham">
                         <div class="check">
                             <input type="checkbox" />
                         </div>
                         <div class="sanpham">
-                            <a href=""><img src="images/<?php echo $row['anh'] ?>" width="80" height="80" /></a>
+                            <a href=""><img src="<?php echo $row['anh'] ?>" width="80" height="80" /></a>
                             <a href=""><?php echo $row['tensp'] ?></a>
                         </div>
                         <div class="Dongia">
-                            <?php echo number_format($row['giaban']); echo"K"?>
+                            <?php echo number_format($row['giaban']); echo"VNĐ"?>
                         </div>
                         <div class="soluong">
                             <div class="input-soluong">
                                 <a href="GioHang.php" class="giam">
                                     <i class="fas fa-minus"></i>
                                 </a>
+<<<<<<< HEAD
                                 <input type="text" class="valuesoluong" value=" 1 <?php
                                 //echo number_format($value['soluong'])
                                 ?>" />
                                 <a href="GioHang.php" class="them">
+=======
+                                <input type="text" class="valuesoluong" value="<?php echo number_format($value['soluong'])?>" />
+                                <a href="GioHang.php?show=update&plus=<?=$key?>" class="them">
+>>>>>>> e6e1bd2b78939dbf608a0fd3875fd42f70e82eec
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="sotien">
-                            <?php
-                                echo number_format($row ['giaban']) 
-                             ?>
+                            <?php echo number_format($tongtien); echo"VNĐ"?>
                         </div>
                         <div class="thaotac">
                             <!-- Xóa sản phẩm khỏi giỏ hàng -->
@@ -71,10 +81,30 @@
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalXoa">
                                 Xóa
                             </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalXoa" tabindex="-1" >
+                                <div class="modal-dialog modal-dialog-centered" >
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Xóa sản phẩm khỏi giỏ hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Sản phẩm nè sẽ bị xóa khỏi giỏ hàng
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Trở về</button>
+                                            <a href="GioHang.php?show=update&delete=<?=$key?>" class="btn btn-danger">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Hết modal-->
                         </div>
                     </div>
                     <?php
-                //}
+                }
                 ?>   
             </div>
         </div>
@@ -82,17 +112,18 @@
         <div class="row giohang-thanhtien">
             <div class="show-thanhtien">
                 <?php
-                //$_SESSION['thanhtien'] = $thanhtien;
+                $_SESSION['thanhtien'] = $thanhtien;
                 ?> 
-                <span><strong>Tổng thanh toán: </strong><span class="text-warning" style="font-size: 25px;"><?php echo number_format($row['giaban'])  ?></span></span>
+                <span><strong>Tổng thanh toán: </strong><span class="text-warning" style="font-size: 25px;"><?php echo number_format($_SESSION['thanhtien']); echo"KVNĐ"?></span></span>
             </div>
 
             <div class="btn-thanhtoan">
-                <!-- Modal -->
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#thanhToan" >Thanh toán</button>
-                
+                <?php 
+                ?>
+                <?php
+                ?>
             </div>
-            <!--<a href="GioHang.php?show=thanhtoan" class="btn btn-warning">Thanh toán</a>-->
+            <a href="GioHang.php?show=thanhtoan" class="btn btn-warning">Thanh toán</a>
         </div>
     </div>
     <?php

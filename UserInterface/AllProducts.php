@@ -3,7 +3,6 @@
 </div>
 <div class="row show-sanpham">
 		<?php
-			# code...
 		if(isset($_GET['trang']))
 		{
 			$trang = $_GET['trang'];
