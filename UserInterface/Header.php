@@ -14,7 +14,10 @@ session_start();
 
                         </div>
                         <div class="taikhoan-ketnoi">
-                            <li class="nav-item dropdown">
+                            <?php
+                                if(isset($_SESSION['login'])) {
+                                    ?>
+                                    <li class="nav-item dropdown">
                                 <img src="#" width="35" height="35">
                                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Nguyễn Chí Bảo
@@ -28,8 +31,15 @@ session_start();
                                             <li><a class="dropdown-item" href="Index.php?showSanpham=dangxuat&dangxuat=1">Đăng xuất</a></li>
                                         </ul>
                             </li>
-                                    <!--<a class="nav-link active border-end" aria-current="page" href="Registration.php">ĐĂNG KÍ</a>
-                                    <a class="nav-link active border-end me-2" aria-current="page" href="Login.php">ĐĂNG NHẬP</a>-->
+                                    <?php
+                                }else{
+                                    ?>
+                                    <a class="nav-link active border-end" aria-current="page" href="Registration.php">ĐĂNG KÍ</a>
+                                    <a class="nav-link active border-end me-2" aria-current="page" href="Login.php">ĐĂNG NHẬP</a>
+                                    <?php
+                                }
+                            ?>
+                                    
 
                                 <p class=" me-2 ">KẾT NỐI</p>
                                 <a class="nav-link active" href="#"><i class="fab fa-facebook"></i></a>
@@ -72,8 +82,29 @@ session_start();
                                     <ul class="navbar-nav cart">
                                         <li class="nav-item">
                                             <a class="nav-link active" href="GioHang.php"><i class="fas fa-shopping-cart"></i>
+                                            <?php
+                                                if(isset($_SESSION['login']))
+                                                {   
+                                                    if(isset($_SESSION['cart']))
+                                                    {
+                                                        $number_cart = 0;
+                                                        foreach ($_SESSION['cart'] as $key => $value) {
+                                                            $number_cart ++;
+                                                        }
+                                                        $_SESSION['number_cart'] = $number_cart;
+                                                    }
+                                                    else
+                                                    {
+                                                       $_SESSION['number_cart'] = 0;
+                                                   }
+                                               }
+                                               else
+                                               {
+                                                $_SESSION['number_cart'] = 0;
+                                            }
+                                            ?>
                                             <span class="number-cart">
-                                                1
+                                                <?php echo $_SESSION['number_cart']; ?>
                                             </span></a>
                                         </li>
 

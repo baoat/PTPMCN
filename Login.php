@@ -65,9 +65,7 @@ session_start();
 									$tendangnhapAdmin = $_POST['email'];
 									$passwordAdmin = $_POST['password'];
 								// Tạo kết nối
-									$conn = mysqli_connect ("localhost", "root", "", "dogiadung") or die("Không kết nối được tới CSDL");
-								// Cho phép PHP lưu bằng tiếng Việt vào database
-									mysqli_set_charset($conn, "utf-8");
+									include('Connection/Connection.php');
 								// Thực hiện truy vấn dữ liệu - insert data vào database
 									$query = " select * from user where email = '$email' and password = '$password' limit 1 ";
 									$run = mysqli_query($conn, $query);
@@ -90,7 +88,7 @@ session_start();
 										$_SESSION['login']=$row['name'];
 										$_SESSION['ma_user'] = $row['id'];
 									//	$_SESSION['avata'] = $row['avata'];
-								//$_SESSION['id_khachhang'] = mysql_insert_id($conn);
+										//$_SESSION['id_khachhang'] = mysql_insert_id($conn);
 										header('Location:Index.php');
 									}
 									elseif ($count_Admin != 0) {
