@@ -125,6 +125,9 @@ session_start();
 
 								<div class="social-auth-links text-center mb-3 user">
 									<p>- OR -</p>
+									<p class="mb-1">
+									<a href="registration.php">Đăng ký ngay</a>
+								</p>
 									<div class="row">
 										<civ class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 											<a href="#" class="btn btn-block btn-primary">
