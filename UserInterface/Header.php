@@ -20,7 +20,9 @@ session_start();
                                     <li class="nav-item dropdown">
                                 <img src="#" width="35" height="35">
                                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Nguyễn Chí Bảo
+                                        <?php
+                                            echo $_SESSION['login'];
+                                            ?>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><a class="dropdown-item" href="Index.php?showIndex=thongtinkhachhang">Thông tin tài khoản</a></li>
@@ -28,7 +30,7 @@ session_start();
                                             <li>
                                                 <a class="dropdown-item" href="ShowDonhang.php">Đơn hàng</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="Index.php?showSanpham=dangxuat&dangxuat=1">Đăng xuất</a></li>
+                                            <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
                                         </ul>
                             </li>
                                     <?php

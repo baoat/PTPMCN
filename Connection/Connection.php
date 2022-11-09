@@ -1,4 +1,5 @@
 <?php
+
 	//Kết nối đến CSDL mySql
 	$conn = mysqli_connect ("localhost", "root", "", "dogiadung") or die("Không kết nối được với CSDL");
 	// Check connection

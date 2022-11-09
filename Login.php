@@ -33,7 +33,7 @@ session_start();
 			<div class="row bg-warning header-login">
 				<div class="logoheader">
 					<div class="navbar-brand">
-						<a href="Index.php"><img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:180px; height:50px;" /></a>
+						<a href="Index.php"><//img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:180px; height:50px;" /></a>
 						<h3><strong>ĐĂNG NHẬP</strong></h3>
 					</div>
 				</div>
@@ -45,9 +45,9 @@ session_start();
 		<div class="clearfix main">
 			<div class="row">
 				<div class=" logo">
-					<img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:80%; height:80%;" />
+					<img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:40%; height:40%;" />
 					<div class="gioithieu">
-						<p><h2>Đồ gia dụng </h2></p>
+						<p><h2></h2></p>
 						
 					</div>
 				</div>
@@ -56,7 +56,7 @@ session_start();
 						<!-- /.login-logo -->
 						<div class="card">
 							<div class="card-body login-card-body">
-								<p class="login-box-msg"><h4>ĐĂNG NHẬP</h4></p>
+								<p class="login-box-msg" ><h4>ĐĂNG NHẬP</h4></p>
 								<?php
 								if(isset($_POST['login']))
 								{
@@ -87,8 +87,7 @@ session_start();
 									{
 										$_SESSION['login']=$row['name'];
 										$_SESSION['ma_user'] = $row['id'];
-									//	$_SESSION['avata'] = $row['avata'];
-										//$_SESSION['id_khachhang'] = mysql_insert_id($conn);
+									
 										header('Location:Index.php');
 									}
 									elseif ($count_Admin != 0) {

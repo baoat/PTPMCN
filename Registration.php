@@ -47,7 +47,7 @@ session_start();
 				<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 logo">
 					<img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:80%; height:80%;" />
 					<div class="gioithieu">
-						<p><h2>Đồ gia dụng </h2></p>
+						<p><h2></h2></p>
 						
 					</div>
 				</div>
@@ -120,6 +120,7 @@ session_start();
 								</form>
 								<div class="social-auth-links text-center mb-3 user">
 									<p>- OR -</p>
+									<a href="login.php">Đăng nhập ngay</a>
 									<div class="row">
 										<civ class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 											<a href="#" class="btn btn-block btn-primary">
