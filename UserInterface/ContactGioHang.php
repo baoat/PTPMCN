@@ -10,9 +10,12 @@
 	if($hienthi == 'giohang'){
 		include("ProcessGioHang/Cart.php");
 	}
-	// elseif($hienthi == 'showgiohang'){
-	// 	include('ShowGioHang.php');
-	// }
+	elseif($hienthi == 'update'){
+		include('ProcessGioHang/Update_cart.php');
+	}
+	elseif($hienthi == 'showgiohang'){
+		include('ShowGioHang.php');
+	}
 	else{
 		include('ShowGioHang.php');
 	}

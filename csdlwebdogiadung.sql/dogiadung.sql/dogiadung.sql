@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 08, 2022 at 08:58 AM
+-- Generation Time: Nov 10, 2022 at 01:22 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -132,6 +132,7 @@ DROP TABLE IF EXISTS `loaisanpham`;
 CREATE TABLE IF NOT EXISTS `loaisanpham` (
   `maloaisp` int(20) NOT NULL AUTO_INCREMENT,
   `tenloaisp` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hinhanh` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`maloaisp`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -139,14 +140,14 @@ CREATE TABLE IF NOT EXISTS `loaisanpham` (
 -- Dumping data for table `loaisanpham`
 --
 
-INSERT INTO `loaisanpham` (`maloaisp`, `tenloaisp`) VALUES
-(1, 'Bếp điện-từ'),
-(2, 'Máy giặt-máy sấy'),
-(3, 'chậu rửa'),
-(4, 'lò nướng-lò vi sóng'),
-(5, 'tủ lạnh'),
-(6, 'bếp ga'),
-(7, 'dụng cụ nhà bếp');
+INSERT INTO `loaisanpham` (`maloaisp`, `tenloaisp`, `hinhanh`) VALUES
+(1, 'Bếp điện-từ', 'bep-dien-tu-hong-ngoai-mayler-ma888.jpg'),
+(2, 'Máy giặt', 'may-giat-inverter-9kg-say-5kg-lg-fv1409g4v-93DNFk.png'),
+(3, 'chậu rửa', 'HD10048-304HPT-31.jpg'),
+(4, 'lò nướng-lò vi sóng', 'nen-mua-lo-vi-song-lo-nuong-hay-lo-vi-song-co-nuong-ztpjV9.jpg'),
+(5, 'tủ lạnh', 'tu-lanh-lg-inverter-496l-4-cua-grx22mb-C101QL.png'),
+(6, 'bếp ga', '0(253).jpg'),
+(7, 'dụng cụ nhà bếp', 'dung-cu-bep-bao-gom-gi.jpg');
 
 -- --------------------------------------------------------
 
@@ -207,19 +208,22 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `diachi` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gioitinh` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hinhanh` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `sodienthoai` (`sodienthoai`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `sodienthoai`, `name`, `password`, `diachi`, `gioitinh`) VALUES
-(1, 'aaa@gmail.com', '0123456789', 'Vũ Văn Phước', '99999', 'aaa', ''),
-(2, 'ssdsgd@gmail.com', '98989898', 'Vũ Văn Phước', '99999', 'fgffgfg', 'nam'),
-(3, 'asd@gmail.com', '56565656', 'Vũ Văn Phước', '99999', 'rerere', 'nam');
+INSERT INTO `user` (`id`, `email`, `sodienthoai`, `name`, `password`, `diachi`, `gioitinh`, `hinhanh`) VALUES
+(1, 'aaa@gmail.com', '0123456789', 'Vũ Văn Phước', '99999', 'aaa', '', ''),
+(2, 'ssdsgd@gmail.com', '98989898', 'Vũ Văn Phước', '99999', 'fgffgfg', 'nam', ''),
+(3, 'asd@gmail.com', '56565656', 'Vũ Văn Phước', '99999', 'rerere', 'nam', ''),
+(5, 'zzz@gmail.com', '565656565', 'asas', '88888', 'fgffgfg', 'nam', ''),
+(6, 'ppp@gmail.com', '7676767', 'Vũ Văn Phước', '99999', '676767', 'nam', '');
 
 -- --------------------------------------------------------
 

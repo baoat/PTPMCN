@@ -16,6 +16,9 @@
 	{
 		include('DoiMatKhau.php');
 	}
+	elseif($hienthiIndex == 'dangxuat') {
+		include('Logout.php');
+	}
 	else
 	{
 		include('Menu.php');

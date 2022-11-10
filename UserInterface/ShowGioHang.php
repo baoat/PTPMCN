@@ -4,9 +4,9 @@ if(!isset($_SESSION))
 {
     session_start();
 }
-if(isset($_SESSION['login']))
-{
-?>
+// if(isset($_SESSION['login']))
+// {
+// ?>
     <div class="clearfix giohang">
         <div class="container container-fluid">
             <?php
@@ -56,7 +56,7 @@ if(isset($_SESSION['login']))
                         </div>
                         <div class="soluong">
                             <div class="input-soluong">
-                                <a href="GioHang.php" class="giam">
+                                <a href="GioHang.php?show=update&minus=<?=$key?>" class="giam">
                                     <i class="fas fa-minus"></i>
                                 </a>
                                 <input type="text" class="valuesoluong" value="<?php echo number_format($value['soluong'])?>" />
@@ -107,7 +107,7 @@ if(isset($_SESSION['login']))
                 <?php
                 $_SESSION['thanhtien'] = $thanhtien;
                 ?> 
-                <span><strong>Tổng thanh toán: </strong><span class="text-warning" style="font-size: 25px;"><?php echo number_format($_SESSION['thanhtien']); echo"KVNĐ"?></span></span>
+                <span><strong>Tổng thanh toán: </strong><span class="text-warning" style="font-size: 25px;"><?php echo number_format($_SESSION['thanhtien']); echo"VNĐ"?></span></span>
             </div>
 
             <div class="btn-thanhtoan">
@@ -137,11 +137,11 @@ else
 </div>
 </div>
 <?php
-}
-else
-{
-    header('location: Login.php');
-}
+// }
+// else
+// {
+//     header('location: Login.php');
+// }
 ?>
 
 
