@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form-login {
+    width: 50%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.header-login {
+    display: flex;
+    align-items: center;
+}
+
+.help a {
+    text-decoration: none;
+}
+
+.user p {
+    margin-bottom: 0;
+}
+
+a.btn.btn-block.btn-danger {
+    width: 100%;
+}
+
+a.btn.btn-block.btn-primary {
+    width: 100%;
+}
+
+.logoheader {
+    padding: 0 300px 0 0;
+    width: 80%;
+}
+
+.gioithieu h2 {
+    color: #0089ff;
+}
+
+p {
+}
+
+.gioithieu {
+    margin-top: -20px;
+}
+
+.row {
+    text-align: center;
+}
+
+    .row .btnlg {
+        padding: 0 25% 0 25%;
+    }
+
+button.btn.btn-primary.btn-block {
+    width: 100%;
+}
+
+span.fas.fa-lock {
+    height: 25px;
+}
+
+span.fas.fa-envelope {
+    height: 25px;
+    text-align: center;
+}
+
+.card {
+    margin-right: 124px;
+    margin-top: 50px;
+}
+
+.header .row {
+    background: yellow;
+}
+
+.help {
+    text-align: center;
+    padding: 37px;
+    width: 20%;
+}
+
+
+body {min-width: 1405px;}
+
+.error {
+    color: red;
+}

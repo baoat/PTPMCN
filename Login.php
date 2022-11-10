@@ -13,7 +13,7 @@ session_start();
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/all.min.css">
 	
-	<link rel="stylesheet" href="css/StyleLogin.css">
+	<link rel="stylesheet" href="css/Login.css">
 	<!-- jQuery -->
 	<script src="//code.jquery.com/jquery.js"></script>
 	<!-- Bootstrap JavaScript -->
@@ -33,7 +33,7 @@ session_start();
 			<div class="row bg-warning header-login">
 				<div class="logoheader">
 					<div class="navbar-brand">
-						<a href="Index.php"><//img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:180px; height:50px;" /></a>
+						<a href="Index.php"><img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:180px; height:50px;" /></a>
 						<h3><strong>ĐĂNG NHẬP</strong></h3>
 					</div>
 				</div>
@@ -45,7 +45,7 @@ session_start();
 		<div class="clearfix main">
 			<div class="row">
 				<div class=" logo">
-					<//img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:40%; height:40%;" />
+					<img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:80%; height:80%;" />
 					<div class="gioithieu">
 						<p><h2></h2></p>
 						
@@ -96,22 +96,14 @@ session_start();
 									}
 								}
 								?>
-								<form action="" method="post" accept-charset="utf-8">
-									<div class="input-group mb-3">
-										<input type="text" name="email" class="form-control" placeholder="Nhập tên đăng nhập hoặc email">
-										<div class="input-group-append">
-											<div class="input-group-text">
-												<span class="fas fa-envelope"></span>
-											</div>
-										</div>
+								<form action="" id="formLogin" method="post" accept-charset="utf-8">
+									<div class=" mb-3">
+										<input type="text" name="email" id="email" class="form-control" placeholder="Nhập tên đăng nhập hoặc email">
+										<span class="message"></span>
 									</div>
-									<div class="input-group mb-3">
-										<input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu">
-										<div class="input-group-append">
-											<div class="input-group-text">
-												<span class="fas fa-lock"></span>
-											</div>
-										</div>
+									<div class=" mb-3">
+										<input type="password" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu">
+										<span class="message"></span>
 									</div>
 									
 									<div class="row btnlg">
@@ -152,5 +144,7 @@ session_start();
 				</div>
 			</div>
 		</div>
+		<script src="Scripts/MainValidator.js"></script>
+		<script src="Scripts/ValidatorLogin.js"></script>
 	</body>
 	</html>
