@@ -45,7 +45,7 @@ session_start();
 		<div class="clearfix main">
 			<div class="row">
 				<div class=" logo">
-					<img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:40%; height:40%;" />
+					<//img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:40%; height:40%;" />
 					<div class="gioithieu">
 						<p><h2></h2></p>
 						

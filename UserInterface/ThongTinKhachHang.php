@@ -37,7 +37,7 @@ if(!isset($_SESSION))
 				</div>
 				<div class="show-imgavata">
 					<div class="img-avata">
-						<img src="<?php echo $row['avata'] ?>">
+						<img src="<?php echo $row['hinhanh'] ?>">
 					</div>
 					<div class="upload-img">
 						<input type="file" name="upload-img">
