@@ -98,12 +98,10 @@ session_start();
                                                     else
                                                     {
                                                        $_SESSION['number_cart'] = 0;
-                                                   }
-                                               }
-                                               else
-                                               {
+                                                    }
+                                               } else {
                                                 $_SESSION['number_cart'] = 0;
-                                            }
+                                                }
                                             ?>
                                             <span class="number-cart">
                                                 <?php echo $_SESSION['number_cart']; ?>

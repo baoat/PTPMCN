@@ -21,24 +21,24 @@ function Validator(options) {
     var getForm = document.querySelector(options.form);
     if(getForm) {
         
-        getForm.onsubmit = function(e) {
-            e.preventDefault();
-            var isFormValid = true;
-            options.rules.forEach(function(rule) {
+        // getForm.onsubmit = function(e) {
+        //     e.preventDefault();
+        //     var isFormValid = true;
+        //     options.rules.forEach(function(rule) {
                 
-                var inputElement = getForm.querySelector(rule.selector);
-                var isValid = Validate(inputElement, rule);
+        //         var inputElement = getForm.querySelector(rule.selector);
+        //         var isValid = Validate(inputElement, rule);
 
-                if(!isValid) {
-                    isFormValid = false;
-                }
-            })
-            if(isFormValid) {
-                options.onsubmit = function() {
+        //         if(!isValid) {
+        //             isFormValid = false;
+        //         }
+        //     })
+        //     if(isFormValid) {
+        //         options.onsubmit = function() {
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
 
         options.rules.forEach(function(rule) {
             if(Array.isArray(arrayRules[rule.selector])) {

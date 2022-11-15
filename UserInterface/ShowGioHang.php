@@ -4,9 +4,9 @@ if(!isset($_SESSION))
 {
     session_start();
 }
-// if(isset($_SESSION['login']))
-// {
-// ?>
+if(isset($_SESSION['login']))
+{
+?>
     <div class="clearfix giohang">
         <div class="container container-fluid">
             <?php
@@ -115,8 +115,8 @@ if(!isset($_SESSION))
                 ?>
                 <?php
                 ?>
+                <a href="GioHang.php?show=thanhtoan" class="btn btn-warning">Thanh toán</a>
             </div>
-            <a href="GioHang.php?show=thanhtoan" class="btn btn-warning">Thanh toán</a>
         </div>
     </div>
     <?php
@@ -137,11 +137,11 @@ else
 </div>
 </div>
 <?php
-// }
-// else
-// {
-//     header('location: Login.php');
-// }
+}
+else
+{
+    header('location: Login.php');
+}
 ?>
 
 

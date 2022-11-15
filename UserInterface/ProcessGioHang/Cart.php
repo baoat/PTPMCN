@@ -25,7 +25,7 @@
 			$_SESSION['cart'][$id]['tensp'] = $row['tensp'];
 			$_SESSION['cart'][$id]['giaban'] = $row['giaban'];
 
-			header('location:GioHang.php?show= '); exit();
+			header('location:GioHang.php?show=showgiohang '); exit();
 		
 		}else
 		{
