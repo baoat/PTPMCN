@@ -56,7 +56,7 @@
                       while ($row=mysqli_fetch_assoc($run)) {
                             ?>
                             <div class="show-danhmuc-menu">
-                                    <a href="">
+                                    <a href="Index.php?showSanpham=loaisp&id=<?php echo $row['maloaisp'] ?>">
                                         <div class="show-thanhphan ">
                                             <div class="img-danhmuc-muenu">
                                                 <img class="logo-menu" src="hinhanh_danhmuc/<?php echo $row['hinhanh'] ?> "/>

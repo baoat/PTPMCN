@@ -30,7 +30,6 @@
 							<p style=" margin-top:5px;"><?php echo number_format($row['giaban']) ?>VNĐ</p>
 						</div>
 						<div class="timkiem-lienquan">
-                            <a>Tìm kiếm liên quan</a>
 							<a href="Index.php?showSanpham=phantrangloai&id=<?php echo $row['masp'] ?>">Tìm kiếm liên quan</a>  
 						</div>
 					</div>
