@@ -22,7 +22,7 @@
 			$ma_hoadon = mysqli_insert_id($conn);
 
 			foreach ($_SESSION['cart'] as $key => $value) {
-				mysqli_query($conn, "INSERT INTO cart_detail(ma_hoadon, id_sanpham, dongia, soluong) VALUES('$ma_hoadon', '$key', '$value[dongia]', '$value[soluong]')");
+				mysqli_query($conn, "INSERT INTO cart_detail(ma_hoadon, id_sanpham, giaban, soluong) VALUES('$ma_hoadon', '$key', '$value[giaban]', '$value[soluong]')");
 			}
 
 			
