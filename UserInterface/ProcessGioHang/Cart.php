@@ -25,14 +25,14 @@
 			$_SESSION['cart'][$id]['tensp'] = $row['tensp'];
 			$_SESSION['cart'][$id]['giaban'] = $row['giaban'];
 
-			header('location:GioHang.php?show=showgiohang '); exit();
+			header('location:GioHang.php?show=showgiohang'); exit();
 		
 		}else
 		{
 				$_SESSION['cart'][$id]['soluong'] = 1;
 				$_SESSION['cart'][$id]['tensp'] = $row['tensp'];
 				$_SESSION['cart'][$id]['giaban'] = $row['giaban'];
-			('location:GioHang.php?show=showgiohang'); exit();
+				header('location:GioHang.php?show=showgiohang'); exit();
 		}
 	}
 ?>

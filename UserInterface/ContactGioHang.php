@@ -16,6 +16,12 @@
 	elseif($hienthi == 'showgiohang'){
 		include('ShowGioHang.php');
 	}
+	elseif($hienthi == 'thanhtoan'){
+		include('ProcessGioHang/ThanhToan.php');
+	}
+	elseif($hienthi == 'camon'){
+		include('Camon.php');
+	}
 	else{
 		include('ShowGioHang.php');
 	}

@@ -140,7 +140,7 @@ else
 }
 else
 {
-    header('location: Login.php');
+    header('location:Login.php');
 }
 ?>
 
