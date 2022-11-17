@@ -84,7 +84,7 @@ if(isset($_SESSION['login']))
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Sản phẩm nè sẽ bị xóa khỏi giỏ hàng
+                                            Sản phẩm này sẽ bị xóa khỏi giỏ hàng
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Trở về</button>

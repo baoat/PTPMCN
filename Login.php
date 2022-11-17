@@ -92,7 +92,7 @@ session_start();
 									}
 									elseif ($count_Admin != 0) {
 										$_SESSION['login_Admin']=$row_Admin['email'];
-										header('Location:Admin.php');
+										header('Location: admin/index.php');
 									}
 								}
 								?>

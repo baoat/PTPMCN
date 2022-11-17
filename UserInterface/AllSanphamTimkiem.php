@@ -18,7 +18,7 @@
 			$trang = 1;
 
 		}
-		$sosp1trang = 20;
+		$sosp1trang = 10;
 		$phantrang = ($trang*$sosp1trang)-$sosp1trang;
 		$query="select * from sanpham where tensp like '%$search%' limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);

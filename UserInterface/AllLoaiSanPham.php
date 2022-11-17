@@ -5,7 +5,7 @@
 		$id = $_GET['id'];
 	}
 
-	//(mục đính là hiển thị loại nước có id_loainuoc)
+	//(mục đính là hiển thị loại sp )
 	$sql="select * from loaisanpham where maloaisp ='".$id."'";
 	$run=mysqli_query($conn, $sql);
 	$row=mysqli_fetch_array($run);
@@ -25,7 +25,7 @@
 			$trang = 1;
 
 		}
-		$sosp1trang = 18;
+		$sosp1trang = 10;
 		$phantrang = ($trang*$sosp1trang)-$sosp1trang;
 		$query="select * from sanpham where maloaisp = $id limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);

@@ -4,6 +4,7 @@
 <?php
 	if(isset($_SESSION['cart']))
 	{
+	
 		//Tăng số lượng mua 1 sản phẩm trong giỏ hàng
 		// tạo biến $plus bằng biến $_GET['plus']
 		$plus = isset($_GET['plus']) ? (int) $_GET['plus'] :'';

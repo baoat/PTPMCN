@@ -29,6 +29,7 @@
 		
 		}else
 		{
+			
 				$_SESSION['cart'][$id]['soluong'] = 1;
 				$_SESSION['cart'][$id]['tensp'] = $row['tensp'];
 				$_SESSION['cart'][$id]['giaban'] = $row['giaban'];
