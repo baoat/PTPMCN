@@ -33,12 +33,12 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Quản Lý <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.php?QL=QLHangHoa">Quản Lý Hàng Hoá</a></li>
-                      <li><a href="index.php?QL=QLKhach">Quản Lý Khách</a></li>
+                      <li><a href="index.php?QL=QLHangHoa">Quản Lý Sản Phẩm</a></li>
                       <li><a href="index.php?QL=QLHoaDon">Quản Lý Hoá Đơn</a></li>
+                      <li><a href="index.php?QL=QLLoaiHangHoa">Quản Lý Loại Sản Phẩm </a></li>
+                      <li><a href="index.php?QL=QLHangHoa">Quản Lý Hãng Sản Phẩm</a></li>
                       <li><a href="index.php?QL=QLHangHoa">chờ thêm chức năng mới</a></li>
-                      <li><a href="index.php?QL=QLHangHoa">chờ thêm chức năng mới</a></li>
-                      <li><a href="index.php?QL=QLHangHoa">chờ thêm chức năng mới</a></li>
+                      <li><a href="index.php?QL=QLKhach">Quản Lý Khách</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>

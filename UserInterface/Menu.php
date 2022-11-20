@@ -59,7 +59,7 @@
                                     <a href="Index.php?showSanpham=loaisp&id=<?php echo $row['maloaisp'] ?>">
                                         <div class="show-thanhphan ">
                                             <div class="img-danhmuc-muenu">
-                                                <img class="logo-menu" src="hinhanh_danhmuc/<?php echo $row['hinhanh'] ?> "/>
+                                                <img class="logo-menu" src="<?php echo $row['hinhanh'] ?> "/>
                                             </div>
 
                                             <div class="name-danhmuc-menu"><strong><?php echo $row['tenloaisp'] ?></strong></div>

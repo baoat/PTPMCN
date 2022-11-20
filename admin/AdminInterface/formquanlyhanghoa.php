@@ -68,11 +68,11 @@
                             </td>
                             <td class=" "><?php echo $row['masp'] ?></td>
                             <td class=" "><?php echo $row['tensp'] ?> </td>
-                            <td class=" "><?php echo $row['giaban'] ?></i></td>
+                            <td class=" "><?php echo $row['giaban'] ?></td>
                             <td class=" "><?php echo $row['soluongton'] ?></td>
                             <td class=" "><?php echo $row['mahang'] ?></td>
                             <td class=" "><?php echo $row['maloaisp'] ?></td>
-                            <td class="a-right a-right "><?php echo $row['mota'] ?></td>
+                            <td class=" "><?php echo $row['mota'] ?></td>
                             <td>
                               <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                               <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
