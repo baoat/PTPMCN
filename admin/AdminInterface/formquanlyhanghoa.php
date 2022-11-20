@@ -7,7 +7,7 @@
               <div class="title_right">
                 <div class="col-md-5 col-sm-5   form-group pull-right top_search">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Tìm Kiếm...">
+                    <input type="text" id = "search" class="form-control" placeholder="Tìm Kiếm...">
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="button">Tìm</button>
                     </span>
@@ -58,10 +58,11 @@
                         <?php
                           $query="select * from sanpham";
                           $run = mysqli_query($conn, $query);
-                          while ($row=mysqli_fetch_assoc($run)) {
-                        ?>
+                          $_SESSION['listProducts'] = mysqli_fetch_assoc($run);
+                          ?>
                         <tbody>
-                          <tr class="even pointer">
+                          <?php while ($row=mysqli_fetch_assoc($run)) {?>
+                          <tr class="even pointer product">
                             <td class="a-center ">
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
@@ -91,5 +92,19 @@
             </div>
           </div>
         </div>
-             
+        <script>
+          var inputElement = document.querySelector('#search');
+          inputElement.addEventListener('input', function (e) {
+            let valueSearch = e.target.value.trim();
+            let listProducts = document.querySelectorAll('.product');
+            listProducts.forEach(item=>{
+              console.log(item.innerText.includes(valueSearch))
+              if(item.innerText.includes(valueSearch)) {
+                item.classList.remove('hide');
+              } else {
+                item.classList.add('hide');
+              }
+            })
+          })
+        </script>
         <!-- /page content -->

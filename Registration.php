@@ -77,7 +77,13 @@ session_start();
 									$run = mysqli_query($conn,$query);
 									$row = mysqli_fetch_array($run);
 									$count = mysqli_num_rows($run);
-									if($count != 0 )
+									if($email == NULL && $sodienthoai  == NULL && $name == NULL && $diachi == NULL && $gioitinh == NULL && $password == NULL && $rpassword == NULL) {
+										echo '<script>
+										alert("Vui lòng nhập đầy đủ thồn tin.")
+										</script>';
+										echo "<span style='color:red; font-size: 20px'>Tên đăng nhập hoặc mật khẩu sai</span>";
+									}
+									elseif($count != 0 )
 									{
 										$_SESSION['login']=$row['name'];
 										$_SESSION['ma_user'] = $row['id'];

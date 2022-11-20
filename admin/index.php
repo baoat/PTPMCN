@@ -24,7 +24,7 @@
     <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="build/css/StyleAdmin.css">
     <link rel="stylesheet" href="src/scss/custom.scss">
     <link rel="stylesheet" href="src/scss/daterangepicker.scss">
 
@@ -45,7 +45,7 @@
           include("ContactAdmin.php");
           include("AdminInterface/FooterAdmin.php");
         ?>
-
+        </script>
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
