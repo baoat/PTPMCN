@@ -75,7 +75,13 @@ session_start();
 									$run_Admin = mysqli_query($conn, $query_Admin);
 									$row_Admin=mysqli_fetch_array($run_Admin);
 									$count_Admin = mysqli_num_rows($run_Admin);
-									if($count == 0 && $count_Admin == 0)
+									if($email == NULL && $password == NULL && $tendangnhapAdmin ==NULL && $passwordAdmin == NULL ) {
+										echo '<script>
+										alert("Vui lòng nhập đầy đủ thồn tin.")
+										</script>';
+										echo "<span style='color:red; font-size: 20px'>Tên đăng nhập hoặc mật khẩu sai</span>";
+									}
+									elseif($count == 0 && $count_Admin == 0)
 									{
 										
 										echo '<script>
