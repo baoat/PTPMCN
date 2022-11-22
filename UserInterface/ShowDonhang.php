@@ -25,25 +25,33 @@ if(!isset($_SESSION))
                     $sql_sanphanm = "SELECT * FROM sanpham WHERE masp = '".$row_cart_detail['id_sanpham']."'";
                     $query_sanpham = mysqli_query($conn, $sql_sanphanm);
                     $row_sanpham = mysqli_fetch_array($query_sanpham);?>
-                    <a href="" class="san-pham-don-hang">
-                        <div class=" row show-san-pham-don-hang">
-                            <div class="img-san-pham-don-hang">
-                                <img src="<?php echo $row_sanpham['anh'];  ?>" alt="">
-                            </div>
-                            <div class="thong-tin-san-pham-don-hang">
-                                <div class="ten-san-pham-don-hang">
-                                    <span><?php echo $row_sanpham['tensp']; ?></span>
+                    <div class="list-don-hang">
+                        <div class="item-don-hang">
+                            <a href="" class="san-pham-don-hang">
+                                <div class=" row show-san-pham-don-hang">
+                                    <div class="img-san-pham-don-hang">
+                                        <!-- <img src="<?php echo $row_sanpham['anh'];  ?>" alt=""> -->
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thong-tin-san-pham-don-hang">
+                                        <div class="ten-san-pham-don-hang">
+                                            <span><?php echo $row_sanpham['tensp']; ?></span>
+                                        </div>
+                                        <div class="so-luong-san-pham-don-hang">
+                                            <span>Số lượng: <?php echo $row_cart_detail['soluong']; ?></span>
+                                        </div>
+                                        <div class="gia-san-pham-don-hang">
+                                            <span><?php echo $row_sanpham['giaban'] ?></span><span>VNĐ</span>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                <div class="so-luong-san-pham-don-hang">
-                                    <span>Số lượng: <?php echo $row_cart_detail['soluong']; ?></span>
-                                </div>
-                                <div class="gia-san-pham-don-hang">
-                                    <span><?php echo $row_sanpham['giaban'] ?></span><span>VNĐ</span>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                    </a>
-                
+                        <div class="huy-don">
+                            <a class="btn btn-danger" href="">Hủy đơn hàng</a>
+                        </div>
+                    </div>
                 <?php
                 }
             } else {

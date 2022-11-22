@@ -14,7 +14,7 @@ if(!isset($_SESSION))
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/StyleUserInterface.css">
+    <link rel="stylesheet" href="css/UserInterface.css">
     <!-- jQuery -->
 	<script src="//code.jquery.com/jquery.js"></script>
 	<!-- Bootstrap JavaScript -->
@@ -28,13 +28,13 @@ if(!isset($_SESSION))
     <div class="clearfix donhang">
         <div class="container container-fluid">
             <div class="qua-trinh">
-                <a href="DonHang.php">
+                <a class="" id="item" href="DonHang.php">
                     <span>Tất Cả</span>
                 </a>
-                <a href="DonHang.php?quatrinh=0">
+                <a id="item" href="DonHang.php?quatrinh=0">
                     <span>Đang Giao</span>
                 </a>
-                <a href="DonHang.php?quatrinh=1">
+                <a id="item" href="DonHang.php?quatrinh=1">
                     <span>Đã Giao</span>
                 </a>
             </div>
@@ -46,7 +46,8 @@ if(!isset($_SESSION))
         </div>
     </div>
     <?php
-        include('UserInterface/Footer.php')
+        include('UserInterface/Footer.php');
     ?>
+    
 </body>
 </html>
