@@ -9,7 +9,7 @@
 	}
 	$sosp1trang = 12;
 	$phantrang = ($trang*$sosp1trang)-$sosp1trang;
-	include('DkShowProducts.php');
+	include('ContactProducts.php');
 ?>
 <div class="row show-sanpham">
 		<?php

@@ -1,16 +1,11 @@
-<?php
-	if(isset($_GET['showDonHang']))
-	{
-		$hienthiDonHang = $_GET['showDonHang'];
-	}
-	else
-	{
-		$hienthiDonHang = '';
-	}
-	if($hienthiDonHang == 'alldonhang') {
-		include('ShowDonhang.php');
-	}else{
-		include('ShowDonhang.php');
-	}
-        
+<?php 
+if(isset($_GET['quatrinh']))
+{
+	$quatrinh = $_GET['quatrinh'];
+    $sql = "SELECT * FROM cart WHERE ma_khachhang = '".$_SESSION['ma_user']."'AND quatrinh = '".$quatrinh."'";
+    $query = mysqli_query($conn, $sql);
+} else {
+    $sql = "SELECT * FROM cart WHERE ma_khachhang = '".$_SESSION['ma_user']."'";
+    $query = mysqli_query($conn, $sql);
+}
 ?>

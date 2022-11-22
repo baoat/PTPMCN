@@ -1,8 +1,17 @@
+<?php
+ob_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
+?>
+<?php
+    include('ContactDonHang.php');
+?>
 <div class="show-don-hang">
 	<div class="container container-fluid">
         <?php
-        $sql = "SELECT * FROM cart WHERE ma_khachhang = '".$_SESSION['ma_user']."'";
-        $query = mysqli_query($conn, $sql);
+        
         $number_cart = 0;
         while($row = mysqli_fetch_array($query)) {
             $number_cart ++;
