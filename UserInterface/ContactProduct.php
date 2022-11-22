@@ -10,8 +10,11 @@
 		}
 		if($hienthiSanpham == 'phantrangloai'){
 			include("AllSanphamLoai.php");
-		}elseif ($hienthiSanpham == "sanphamtimkiem") {
+		}
+		elseif ($hienthiSanpham == "sanphamtimkiem") {
 			include("AllSanphamTimkiem.php");
+		}elseif ($hienthiSanpham == "hangsp") {
+			include("AllHangSanPham.php");
 		}elseif ($hienthiSanpham == "loaisp") {
 			include("AllLoaiSanPham.php");
 		}

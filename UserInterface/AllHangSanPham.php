@@ -6,13 +6,13 @@
 	}
 
 	//(mục đính là hiển thị loại sp )
-	$sql="select * from loaisanpham where maloaisp ='".$id."'";
+	$sql="select * from hangsanpham where mahangsp ='".$id."'";
 	$run=mysqli_query($conn, $sql);
 	$row=mysqli_fetch_array($run);
 ?>
 
 <div class="row goi-y">
-	<span class="text-uppercase"><?php echo $row['tenloaisp'] ?></span>
+	<span class="text-uppercase"><?php echo $row['tenhangsp'] ?></span>
 </div>
 <div class="row show-sanpham">
 		<?php
@@ -27,7 +27,7 @@
 		}
 		$sosp1trang = 12;
 		$phantrang = ($trang*$sosp1trang)-$sosp1trang;
-		$query="select * from sanpham where maloaisp = $id limit $phantrang, $sosp1trang";
+		$query="select * from sanpham where mahang = $id limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
 		while ($row=mysqli_fetch_assoc($run)) {
 			?>

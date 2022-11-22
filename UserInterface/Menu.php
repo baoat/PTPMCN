@@ -44,9 +44,9 @@
     <div class="container container-fluid">
         <div class="row danhmuc ">
             <div class="container-fluid">
-                <div class="row text-center danhmuc-text">
+                <div class="row danhmuc-text">
                     <div class="container-fluid ">
-                        <h4>DANH MỤC</h4>
+                        <span class="text-uppercase font-sine" >Danh mục</span>
                     </div>
                 </div>
                 <div class="row danhmuc-menu">
@@ -62,7 +62,7 @@
                                                 <img class="logo-menu" src="<?php echo $row['hinhanh'] ?> "/>
                                             </div>
 
-                                            <div class="name-danhmuc-menu"><strong><?php echo $row['tenloaisp'] ?></strong></div>
+                                            <div class="name-danhmuc-menu" style="font-size: 0.84rem"><?php echo $row['tenloaisp'] ?></div>
                                         </div>
 
                                     </a>

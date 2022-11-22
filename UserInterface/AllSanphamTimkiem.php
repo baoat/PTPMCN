@@ -5,7 +5,7 @@
 	
 ?>
 <div class="row goi-y">
-	<h2 class="text-uppercase">Sản phẩm liên quan đến "<?php echo "$search"; ?>"</h2>
+	<span class="text-uppercase">Sản phẩm liên quan đến "<?php echo "$search"; ?></span>
 </div>
 <div class="row show-sanpham">
 		<?php
@@ -18,7 +18,7 @@
 			$trang = 1;
 
 		}
-		$sosp1trang = 10;
+		$sosp1trang = 12;
 		$phantrang = ($trang*$sosp1trang)-$sosp1trang;
 		$query="select * from sanpham where tensp like '%$search%' limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
@@ -31,10 +31,10 @@
 							<img src="images/<?php echo $row['anh'] ?>" />
 						</div>
 						<div class="name-show-sanpham">
-							<p style="color: black; margin-top:5px;"><strong><?php echo $row['tensp'] ?></strong></p>
+							<p style="color: black; margin-top:5px;"><?php echo $row['tensp'] ?></p>
 						</div>
 						<div class="gia-show-sanpham">
-						<p style=" margin-top:5px;"><?php echo number_format($row['giaban']) ?>VNĐ</p>
+						<span>₫</span><p style=" margin-top:5px;"><?php echo number_format($row['giaban']) ?></p>
 						</div>
 						<div class="timkiem-lienquan">
 							<a href="Index.php?showSanpham=phantrangloai&id=<?php echo $row['masp'] ?>">Tìm kiếm liên quan</a>

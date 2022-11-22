@@ -76,10 +76,28 @@ session_start();
                                             <a class="nav-link active">TIN TỨC</a>
                                         </li>
                                     </ul>
-                                    <form class="d-flex form-tim-kiem" action="Index.php?showSanpham=sanphamtimkiem" method="post">
-                                        <input class="form-control me-2" type="search" placeholder="Nhập từ khóa" name="san_pham_tim_kiem" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit" name="search"><i class="fas fa-search"></i></button>
-                                    </form>
+                                    <div class="search-hang form-tim-kiem">
+                                        <div class="search-form">
+                                            <form class="d-flex " action="Index.php?showSanpham=sanphamtimkiem" method="post">
+                                                <input class="form-control me-2" type="search" placeholder="Nhập từ khóa" name="san_pham_tim_kiem" aria-label="Search">
+                                                <button class="btn btn-outline-success" type="submit" name="search"><i class="fas fa-search"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="hang">
+                                        <?php
+                                            $select = "SELECT * FROM hangsanpham";
+                                            $query = mysqli_query($conn, $select);
+                                            while($row = mysqli_fetch_array($query)) {
+                                        ?>
+                                            
+                                                <a href="Index.php?showSanpham=hangsp&id=<?php echo $row['mahangsp'] ?>"><?php echo $row['tenhangsp'] ?></a>
+                                            
+                                        <?php    
+                                            }
+                                        ?>
+                                        </div>
+                                    </div>
+                                    
 
                                     <ul class="navbar-nav cart">
                                         <li class="nav-item">
