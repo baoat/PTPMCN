@@ -28,7 +28,7 @@ session_start();
                                             <li><a class="dropdown-item" href="Index.php?showIndex=thongtinkhachhang">Thông tin tài khoản</a></li>
                                             <li><a class="dropdown-item" href="Index.php?showIndex=doimatkhau">Đổi mật khẩu </a></li>
                                             <li>
-                                                <a class="dropdown-item" href="ShowDonhang.php">Đơn hàng</a>
+                                                <a class="dropdown-item" href="Index.php?showIndex=donhang">Đơn hàng</a>
                                             </li>
                                             <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
                                         </ul>

@@ -11,5 +11,5 @@
 	if($hienthiChitiet == "chiTiet")
 	{
 		include('ShowChiTiet.php');
-	}
+	} 
 ?>

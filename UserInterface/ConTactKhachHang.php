@@ -15,12 +15,14 @@
 	elseif($hienthiIndex == 'doimatkhau')
 	{
 		include('DoiMatKhau.php');
-	}
-	elseif($hienthiIndex == 'dangxuat') {
+	}elseif($hienthiIndex == 'dangxuat') {
 		include('Logout.php');
+	}elseif($hienthiIndex == 'donhang') {
+		include('DonHang.php');
+	}elseif($hienthiIndex == 'quatrinh') {
+		include('ShowDonHangQT.php');
 	}
 	else
 	{
 		include('Menu.php');
 	}
-?>

@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/UserInterface.css">
+    <link rel="stylesheet" href="css/StyleUserInterface.css">
     <link rel="stylesheet" href="css/StyleGioHang.css">
     <!-- jQuery -->
 	<script src="//code.jquery.com/jquery.js"></script>
