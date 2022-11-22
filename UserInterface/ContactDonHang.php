@@ -7,5 +7,10 @@
 	{
 		$hienthiDonHang = '';
 	}
-        include('ShowDonhang.php');
+	if($hienthiDonHang == 'alldonhang') {
+		include('ShowDonhang.php');
+	}else{
+		include('ShowDonhang.php');
+	}
+        
 ?>

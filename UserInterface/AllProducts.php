@@ -1,21 +1,18 @@
-<div class="row goi-y">
-	<span class="text-uppercase">Gợi ý cho bạn</span>
-	<!-- <h2 class="text-uppercase">Gợi ý cho bạn</h2> -->
-</div>
+<?php
+	if(isset($_GET['trang']))
+	{
+		$trang = $_GET['trang'];
+	}
+	else
+	{
+		$trang = 1;
+	}
+	$sosp1trang = 12;
+	$phantrang = ($trang*$sosp1trang)-$sosp1trang;
+	include('DkShowProducts.php');
+?>
 <div class="row show-sanpham">
 		<?php
-		if(isset($_GET['trang']))
-		{
-			$trang = $_GET['trang'];
-		}
-		else
-		{
-			$trang = 1;
-		}
-		$sosp1trang = 12;
-		$phantrang = ($trang*$sosp1trang)-$sosp1trang;
-		$query="select * from sanpham limit $phantrang, $sosp1trang";
-		$run = mysqli_query($conn, $query);
 		while ($row=mysqli_fetch_assoc($run)) {
 			?>
 			<div class="show-tung-sanpham">

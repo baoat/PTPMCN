@@ -19,8 +19,6 @@
 		include('Logout.php');
 	}elseif($hienthiIndex == 'donhang') {
 		include('DonHang.php');
-	}elseif($hienthiIndex == 'quatrinh') {
-		include('ShowDonHangQT.php');
 	}
 	else
 	{

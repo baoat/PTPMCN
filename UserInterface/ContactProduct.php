@@ -15,8 +15,9 @@
 			include("AllSanphamTimkiem.php");
 		}elseif ($hienthiSanpham == "hangsp") {
 			include("AllHangSanPham.php");
-		}elseif ($hienthiSanpham == "loaisp") {
-			include("AllLoaiSanPham.php");
+		}
+		elseif ($hienthiSanpham == "loaisp") {
+			include("AllProducts.php");
 		}
 		else
 		{

@@ -9,10 +9,10 @@ if(!isset($_SESSION))
 <div class="clearfix donhang">
     <div class="container container-fluid">
         <div class="qua-trinh">
-            <a href="Index.php?showIndex=donhang">
+            <a href="Index.php?showDonHang=alldonhang">
                 <span>Tất Cả</span>
             </a>
-            <a href="Index.php?showIndex=quatrinh&quatrinh=0">
+            <a href="#">
                 <span>Đang Giao</span>
             </a>
             <a href="#">
