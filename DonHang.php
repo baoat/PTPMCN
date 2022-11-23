@@ -37,6 +37,9 @@ if(!isset($_SESSION))
                 <a id="item" href="DonHang.php?quatrinh=1">
                     <span>Đã Giao</span>
                 </a>
+                <a id="item" href="DonHang.php?trangthai=1">
+                    <span>Đã Hủy</span>
+                </a>
             </div>
         </div>
         <div class="don-hang">

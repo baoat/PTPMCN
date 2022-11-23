@@ -49,7 +49,27 @@ if(!isset($_SESSION))
                             </a>
                         </div>
                         <div class="huy-don">
-                            <a class="btn btn-danger" href="">Hủy đơn hàng</a>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalXoa">
+                                Hủy Đơn Hàng
+                            </button>
+                            
+                        </div>
+                        <div class="modal fade" id="modalXoa" tabindex="-1" >
+                            <div class="modal-dialog modal-dialog-centered" >
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">HỦY ĐƠN HÀNG</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Bạn Có Chắc Chắn Muốn Hủy Đơn Hàng Này?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Trở về</button>
+                                        <a class="btn btn-danger" href="DonHang.php?huydon=<?php echo $row['ma_hoadon'] ?>">Hủy</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php
