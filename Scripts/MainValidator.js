@@ -73,3 +73,11 @@ Validator.isEmail = function(selector, message) {
         }
     }
 }
+Validator.isLength = function(selector, message) {
+    return {
+        selector: selector,
+        test: function(value) {
+            return value == 6 ? undefined : message || 'Trường này phải nhập tối thiểu 6 kí tự.'
+        }
+    }
+}

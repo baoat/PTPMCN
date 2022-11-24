@@ -9,6 +9,7 @@ Validator({
         Validator.isRequired('#email', 'Vui lòng nhập email.'), 
         Validator.isRequired('#password', 'Vui lòng nhập mật khẩu.'), 
         Validator.isRequired('#rpassword', 'Vui lòng xác nhận mật khẩu.'), 
+        Validator.isLength('#password', 'Vui lòng nhập tối thiểu 6 kí tự.'),
          
         Validator.isEmail('#email'),
     ],
