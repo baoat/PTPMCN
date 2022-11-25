@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.anh-sp img {
+    width: 100%;
+}
+
+.anh-sp {
+    width: 100%;
+}
+.hide {
+    display: none;
+}

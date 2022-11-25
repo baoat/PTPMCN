@@ -42,6 +42,7 @@
                               <input type="checkbox" id="check-all" class="flat">
                             </th>
                             <th class="column-title">Mã SP </th>
+                            <th class="column-title">Hình Ảnh SP</th>
                             <th class="column-title">Tên SP</th>
                             <th class="column-title">Giá Bán </th>
                             <th class="column-title">Số Lượng Tồn </th>
@@ -67,6 +68,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" "><?php echo $row['masp'] ?></td>
+                            <td class="">
+                              <div class="anh-sp">
+                                <img src="../images/<?php echo $row['anh'] ?>" alt="">
+                              </div>
+                            </td>
                             <td class=" "><?php echo $row['tensp'] ?> </td>
                             <td class=" "><?php echo $row['giaban'] ?></td>
                             <td class=" "><?php echo $row['soluongton'] ?></td>
@@ -74,7 +80,6 @@
                             <td class=" "><?php echo $row['maloaisp'] ?></td>
                             <td class=" "><?php echo $row['mota'] ?></td>
                             <td>
-                              <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                               <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                               <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                             </td>

@@ -48,6 +48,8 @@
                             <th class="column-title">Số điện thoại</th>
                             <th class="column-title">Địa chỉ</th>
                             <th class="column-title">Kiểu thanh toán</th>
+                            <th class="column-title">Quá Trình</th>
+                            <th class="column-title">trạng Thái</th>
                             <th class="column-title no-link last"><span class="nobr">Chỉnh sửa</span>
                             </th>
                             <th class="bulk-actions" colspan="7">
@@ -74,10 +76,26 @@
                             <td class=" "><?php echo $row['phone'] ?></td>
                             <td class=" "><?php echo $row['address'] ?></td>
                             <td class=" "><?php echo $row['kieuthanhtoan'] ?></td>
+                            <td class=" ">
+                              <?php 
+                                if($row['quatrinh'] == 1) {
+                                  ?>
+                                  <a href="index.php?QL=trangthai&trangthai=<?php echo $row['ma_hoadon'] ?>"class="btn btn-sm btn-success">
+                                      <i class="fa fa-toggle-on"></i>
+                                  </a>
+                                  <?php
+                                } else {
+                                  ?>
+                                    <a href="index.php?QL=trangthai&trangthai=<?php echo $row['ma_hoadon'] ?>" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-toggle-off"></i>
+                                    </a>
+                                  <?php
+                                }
+                              ?>
+                              <!-- <?php echo $row['quatrinh'] ?></td> -->
+                            <td class=" "><?php echo $row['trangthai'] ?></td>
                             <td>
-                              <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                              <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                              <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                              <a href="index.php?QL=chitietdonhang&chitiet=<?php echo $row['ma_hoadon'] ?>" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                             </td>
                           </tr>

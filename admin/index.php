@@ -24,7 +24,7 @@
     <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <link rel="stylesheet" href="build/css/StyleAdmin.css">
+    <link rel="stylesheet" href="build/css/ Admin.css">
     <link rel="stylesheet" href="src/scss/custom.scss">
     <link rel="stylesheet" href="src/scss/daterangepicker.scss">
 

@@ -17,6 +17,10 @@
         include("AdminInterface/formquanlyhoadon.php");
     }elseif($quanLy == 'QLKhach'){
         include("AdminInterface/formquanlykhach.php");
+    }elseif($quanLy == 'chitietdonhang'){
+        include("AdminInterface/formchitietdonhang.php");
+    }elseif($quanLy == 'trangthai'){
+        include("AdminInterface/Process/TrangThai.php");
     }else{
         include('AdminInterface/formhome.php');
     }
