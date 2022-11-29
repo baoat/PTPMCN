@@ -30,8 +30,7 @@ if(!isset($_SESSION))
                             <a href="" class="san-pham-don-hang">
                                 <div class=" row show-san-pham-don-hang">
                                     <div class="img-san-pham-don-hang">
-                                        <!-- <img src="<?php echo $row_sanpham['anh'];  ?>" alt=""> -->
-                                        <img src="" alt="">
+                                        <img src="images/<?php echo $row_sanpham['anh'];  ?>" alt="">
                                     </div>
                                     <div class="thong-tin-san-pham-don-hang">
                                         <div class="ten-san-pham-don-hang">
@@ -41,7 +40,7 @@ if(!isset($_SESSION))
                                             <span>Số lượng: <?php echo $row_cart_detail['soluong']; ?></span>
                                         </div>
                                         <div class="gia-san-pham-don-hang">
-                                            <span><?php echo $row_sanpham['giaban'] ?></span><span>VNĐ</span>
+                                            <span><?php echo number_format($row_sanpham['giaban']) ?></span><span>VNĐ</span>
                                         </div>
                                         
                                     </div>
@@ -49,9 +48,39 @@ if(!isset($_SESSION))
                             </a>
                         </div>
                         <div class="huy-don">
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalXoa">
-                                Hủy Đơn Hàng
-                            </button>
+                            <?php
+                                if($row['quatrinh'] == 0 && $row['trangthai'] == 0) {
+                                    ?>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalXoa">
+                                        Hủy Đơn Hàng
+                                    </button>
+                                    <?php
+                                } elseif($row['quatrinh'] == NULL && $row['trangthai'] == NULL) {
+                                    ?>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalXoa">
+                                        Hủy Đơn Hàng
+                                    </button>
+                                    <?php
+                                } elseif($row['quatrinh'] == 1 && $row['trangthai'] == 0) {
+                                    ?>
+                                    <div class="danhgia-mualai">
+                                        <a class="btn btn-danger">
+                                            Đánh Giá
+                                        </a>
+                                        <a class="btn btn-danger">
+                                            Mua Lại
+                                        </a>
+                                    </div>
+                                    <?php
+                                } elseif($row['trangthai'] == 1) {
+                                    ?> 
+                                    <a class="btn btn-danger">
+                                        Mua Lại
+                                    </a>
+                                    <?php
+                                }
+                            ?>
+                            
                             
                         </div>
                         <div class="modal fade" id="modalXoa" tabindex="-1" >
@@ -81,7 +110,7 @@ if(!isset($_SESSION))
                 <div class="tong-tien-hoa-don">
                     <div class="show-tong-so-tien-hoa-don">
                         <span>Tổng số tiền: </span>
-                        <span class="so"><?php echo $row['thanhtien']; ?></span><span>VNĐ</span>
+                        <span class="so"><?php echo number_format($row['thanhtien']); ?></span><span>VNĐ</span>
                     </div>
                 </div>
                 <div class="lien-he-shop">

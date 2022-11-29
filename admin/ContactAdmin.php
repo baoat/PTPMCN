@@ -21,6 +21,8 @@
         include("AdminInterface/formchitietdonhang.php");
     }elseif($quanLy == 'trangthai'){
         include("AdminInterface/Process/TrangThai.php");
+    }elseif($quanLy == 'QLHangSp'){
+        include("AdminInterface/formquanlyhangsp.php");
     }else{
         include('AdminInterface/formhome.php');
     }

@@ -127,16 +127,18 @@
     width: 95%;
 }
 
-.rating li {
-    margin-right: 8px;
+.danh-gia-san-pham .rating li {
+    margin-right: 5px;
+    font-size: 40px;
 }
 
 .rating {
     display: flex;
     align-items: center;
+    margin-top: 0;
 }
 
-.rating li {
+.show-tong-sao .rating li {
     font-size: 30px;
 }
 

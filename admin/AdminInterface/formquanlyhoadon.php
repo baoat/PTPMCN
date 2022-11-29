@@ -93,7 +93,21 @@
                                 }
                               ?>
                               <!-- <?php echo $row['quatrinh'] ?></td> -->
-                            <td class=" "><?php echo $row['trangthai'] ?></td>
+                            <td class=" ">
+                            <?php
+                              if($row['trangthai'] == 1) {
+                                ?>
+                                  <a href=""class="btn btn-sm btn-success">
+                                  <i class="fa fa-toggle-on"></i>
+                                <?php
+                              } else {
+                                ?>
+                                  <a href="" class="btn btn-sm btn-danger">
+                                    <i class="fa fa-toggle-off"></i>
+                                  </a>
+                                <?php
+                              }
+                                ?></td>
                             <td>
                               <a href="index.php?QL=chitietdonhang&chitiet=<?php echo $row['ma_hoadon'] ?>" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>

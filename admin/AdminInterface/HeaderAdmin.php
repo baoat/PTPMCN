@@ -1,3 +1,8 @@
+<?php
+  ob_start();
+  session_start();
+?>
+
 <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -36,7 +41,7 @@
                       <li><a href="index.php?QL=QLHangHoa">Quản Lý Sản Phẩm</a></li>
                       <li><a href="index.php?QL=QLHoaDon">Quản Lý Hoá Đơn</a></li>
                       <li><a href="index.php?QL=QLLoaiHangHoa">Quản Lý Loại Sản Phẩm </a></li>
-                      <li><a href="index.php?QL=QLHangHoa">Quản Lý Hãng Sản Phẩm</a></li>
+                      <li><a href="index.php?QL=QLHangSp">Quản Lý Hãng Sản Phẩm</a></li>
                       <li><a href="index.php?QL=QLHangHoa">chờ thêm chức năng mới</a></li>
                       <li><a href="index.php?QL=QLKhach">Quản Lý Khách</a></li>
                     </ul>
@@ -76,7 +81,12 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">ADMIN
+                    <img src="images/img.jpg" alt="">
+                    <span>
+                      <?php
+                        echo $_SESSION['login_Admin'];
+                      ?>
+                    </span>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Thoát </a>
