@@ -58,24 +58,13 @@ session_start();
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light ">
                             <div class="container-fluid">
-                                <div class="navbar-brand">
+                                <div class="navbar-brand logo">
                                     <a href="Index.php"><img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg" class="img-fluid" style="width:180px; height:50px;" /></a>
                                 </div>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                        <li class="nav-item">
-                                            <a href="Index.php" class="nav-link active">TRANG CHỦ</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="" class="nav-link active">GIỚI THIỆU</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active">TIN TỨC</a>
-                                        </li>
-                                    </ul>
                                     <div class="search-hang form-tim-kiem">
                                         <div class="search-form">
                                             <form class="d-flex " action="Index.php?showSanpham=sanphamtimkiem" method="post">

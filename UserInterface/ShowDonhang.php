@@ -27,7 +27,7 @@ if(!isset($_SESSION))
                     $row_sanpham = mysqli_fetch_array($query_sanpham);?>
                     <div class="list-don-hang">
                         <div class="item-don-hang">
-                            <a href="" class="san-pham-don-hang">
+                            <a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanpham['masp'] ?>" class="san-pham-don-hang">
                                 <div class=" row show-san-pham-don-hang">
                                     <div class="img-san-pham-don-hang">
                                         <img src="images/<?php echo $row_sanpham['anh'];  ?>" alt="">
@@ -64,17 +64,17 @@ if(!isset($_SESSION))
                                 } elseif($row['quatrinh'] == 1 && $row['trangthai'] == 0) {
                                     ?>
                                     <div class="danhgia-mualai">
-                                        <a class="btn btn-danger">
+                                        <a href="ChiTietSanPham.php?showChitiet=chiTiet&action=danhgia&chiTiet=<?php echo $row_sanpham['masp'] ?>" class="btn btn-danger">
                                             Đánh Giá
                                         </a>
-                                        <a class="btn btn-danger">
+                                        <a href="GioHang.php?show=giohang&giohang=<?php echo $row_sanpham['masp'] ?>" class="btn btn-danger">
                                             Mua Lại
                                         </a>
                                     </div>
                                     <?php
                                 } elseif($row['trangthai'] == 1) {
                                     ?> 
-                                    <a class="btn btn-danger">
+                                    <a href="GioHang.php?show=giohang&giohang=<?php echo $row_sanpham['masp'] ?>" class="btn btn-danger">
                                         Mua Lại
                                     </a>
                                     <?php
@@ -107,6 +107,7 @@ if(!isset($_SESSION))
                 echo "Chưa có đơn hàng.";
             }
             ?>
+            
                 <div class="tong-tien-hoa-don">
                     <div class="show-tong-so-tien-hoa-don">
                         <span>Tổng số tiền: </span>

@@ -19,6 +19,7 @@ span.sao-chuan {
 
 .show-danh-gia-nguoi-dung {
     padding: 0 0 0 20px;
+    margin-top: 5px;
 }
 
 .avata-nguoi-dung img {
@@ -41,8 +42,8 @@ span.sao-chuan {
 }
 
 .ten-nguoi-dung {
-    display: grid;
     width: 80%;
+    padding-top: 5px;
 }
 
 .nguoi-dung {
