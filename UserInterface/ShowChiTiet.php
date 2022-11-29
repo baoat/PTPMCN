@@ -115,7 +115,7 @@ $row = mysqli_fetch_array($query);
 
 						$sql = "INSERT INTO chitietdanhgia(ngaydanhgia, id_user, id_sanpham, sosaodanhgia, noidungdanhgia) VALUES ('$ngaydanhgia', '$ma_khachhang', '$id_sanpham', '$sao', '$noidung')";
 						$query = mysqli_query($conn, $sql);
-						header("location: ChiTietSanPham.php?showChitiet=chiTiet&action=danhgia&chiTiet='".$id."'");
+						header('location: ChiTietSanPham.php?showChitiet=chiTiet&action=danhgia&chiTiet='.$id.'');
 					}					
 					?>
 					<div class=" form-danh-gia ">
