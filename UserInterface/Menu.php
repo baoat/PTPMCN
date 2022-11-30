@@ -9,7 +9,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
               <div class="carousel-inner">
-              <div class="carousel-item active">
+                <div class="carousel-item active">
                   <img height="300" src="https://i.imgur.com/jn0u6q8.png" class="d-block w-100" >
                 </div>
                 <div class="carousel-item">

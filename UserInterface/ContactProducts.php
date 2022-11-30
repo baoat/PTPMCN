@@ -10,7 +10,7 @@
 			<span class="text-uppercase"><?php echo $row['tenloaisp'] ?></span>
 		</div>
 		<?php
-		$query="select * from sanpham where maloaisp = $id limit $phantrang, $sosp1trang";
+		$query="select * from sanpham where maloaisp = $id AND soluongton > 0 limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
 	} elseif(isset($_POST['search'])) {
         $search = $_POST['san_pham_tim_kiem'];
@@ -19,7 +19,7 @@
             <span class="text-uppercase">Sản phẩm liên quan đến "<?php echo "$search"; ?></span>
         </div>
         <?php
-        $query="select * from sanpham where tensp like '%$search%' limit $phantrang, $sosp1trang";
+        $query="select * from sanpham where tensp like '%$search%' AND soluongton > 0 limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
     } elseif(isset($_GET['id'])) {
         $sql="select * from hangsanpham where mahangsp ='".$id."'";
@@ -30,7 +30,7 @@
             <span class="text-uppercase"><?php echo $row['tenhangsp'] ?></span>
         </div>
         <?php
-        $query="select * from sanpham where mahang = $id limit $phantrang, $sosp1trang";
+        $query="select * from sanpham where mahang = $id AND soluongton > 0 limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
     } else {
 		?>
@@ -38,7 +38,7 @@
 			<span class="text-uppercase">Gợi ý cho bạn</span>
 		</div>
 		<?php
-		$query="select * from sanpham limit $phantrang, $sosp1trang";
+		$query="select * from sanpham WHERE soluongton > 0 limit $phantrang, $sosp1trang ";
 		$run = mysqli_query($conn, $query);
 	}
 ?>

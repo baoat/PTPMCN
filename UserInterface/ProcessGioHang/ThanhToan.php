@@ -20,9 +20,13 @@
 		{
 			//Lấy mã hóa đơn trong bảng cart
 			$ma_hoadon = mysqli_insert_id($conn);
-
+			$soluongton = 0;
 			foreach ($_SESSION['cart'] as $key => $value) {
 				mysqli_query($conn, "INSERT INTO cart_detail(ma_hoadon, id_sanpham, giaban, soluong) VALUES('$ma_hoadon', '$key', '$value[giaban]', '$value[soluong]')");
+				$query_sanpham = mysqli_query($conn, "SELECT * FROM sanpham WHERE masp = '$key'");
+				$row_sanpham = mysqli_fetch_array($query_sanpham);
+				$soluongton = $row_sanpham['soluongton'] - $value['soluong'];
+				mysqli_query($conn, "UPDATE sanpham SET soluongton = '$soluongton' WHERE masp = '$key'");
 			}
 
 			
