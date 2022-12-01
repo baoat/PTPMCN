@@ -80,7 +80,7 @@
                             <td class=" "><?php echo $row['maloaisp'] ?></td>
                             <td class=" "><?php echo $row['mota'] ?></td>
                             <td>
-                              <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                              <a href="index.php?QL=editsp&id=<?php echo $row['masp'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                               <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                             </td>
                             </td>

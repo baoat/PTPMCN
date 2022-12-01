@@ -13,6 +13,8 @@
         include("AdminInterface/formquanlyloaisp.php");
     }elseif($quanLy == 'editloaisp'){
         include("AdminInterface/editloaisp.php");
+    }elseif($quanLy == 'editsp'){
+        include("AdminInterface/editsp.php");
     }elseif($quanLy == 'QLHoaDon'){
         include("AdminInterface/formquanlyhoadon.php");
     }elseif($quanLy == 'QLKhach'){
