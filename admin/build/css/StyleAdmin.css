@@ -3,8 +3,13 @@
     padding: 0;
 }
 
+.container.body {
+}
+
+.col-md-9.process.container-fluid {
+}
+
 .anh-sp img {
-    width: 100%;
 }
 
 .anh-sp {

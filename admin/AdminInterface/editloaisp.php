@@ -4,11 +4,12 @@
 		$id = $_GET['id'];
 		//echo $id;
 	}
-?>
-<div class="container-fluid">
+?> 
+<div class="top_nav">
+<div class=" col-md-9  process container-fluid">
 	<div class="row">
 		<div class="col-md-1 text-left">
-			<a href="Admin.php?adminql=type" class="btn btn-sm btn-default"><i class="fas fa-chevron-left"></i></a>
+			<a href="Admin.php?adminql=type" class="btn btn-sm btn-default"><i class=" fa-chevron-left"></i></a>
 		</div>
 		<div class="col-md-11">
 			<h2 class="text-left text-danger">Sửa loại sản phẩm</h2>
@@ -64,7 +65,7 @@
 		}
 	?>
 
-	<div class="row">
+	<div class=" form-edit">
 		<form action="" method="post" enctype="multipart/form-data">
 		  <div class="mb-3">
 		    <label for="exampleInputEmail1" class="form-label">Mã Loại Sản Phảm</label>
@@ -82,3 +83,4 @@
 		</form> 
 	</div>
 </div>
+	</div>
