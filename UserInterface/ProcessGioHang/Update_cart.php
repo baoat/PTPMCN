@@ -8,10 +8,17 @@
 		//Tăng số lượng mua 1 sản phẩm trong giỏ hàng
 		// tạo biến $plus bằng biến $_GET['plus']
 		$plus = isset($_GET['plus']) ? (int) $_GET['plus'] :'';
+		$query = mysqli_query($conn, "SELECT * FROM sanpham WHERE masp = '$plus'");
+		$row = mysqli_fetch_array($query);
 		//Kiểm tra 
 		if($plus)
 			{
 				$_SESSION['cart'][$plus]['soluong'] +=1;
+				if($_SESSION['cart'][$plus]['soluong'] > $row['soluongton']) {
+					$_SESSION['cart'][$plus]['soluong'] = $row['soluongton'];
+				} elseif($_SESSION['cart'][$plus]['soluong'] >= 100) {
+					$_SESSION['cart'][$plus]['soluong'] = 100;
+				}
 				header('location:GioHang.php?show= '); exit();
 			}
 		//Giảm số lượng mua 1 sản phẩm trong giỏ hàng

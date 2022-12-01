@@ -119,10 +119,6 @@ $row = mysqli_fetch_array($query);
 					}					
 					?>
 					<div class=" form-danh-gia ">
-                        <div class="danh-gia">
-                            <span>Đánh Giá</span>
-                        </div>
-                        
                         <form action="" method="post">
                             <div class="input-sao">
                             <span>Chọn số sao: </span>
