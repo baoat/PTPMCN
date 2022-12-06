@@ -13,8 +13,12 @@
         include("AdminInterface/formquanlyloaisp.php");
     }elseif($quanLy == 'editloaisp'){
         include("AdminInterface/editloaisp.php");
+    }elseif($quanLy == 'addsp'){
+        include("AdminInterface/addsp.php");
     }elseif($quanLy == 'editsp'){
         include("AdminInterface/editsp.php");
+    }elseif($quanLy == 'deletesp'){
+        include("AdminInterface/deletesp.php");
     }elseif($quanLy == 'QLHoaDon'){
         include("AdminInterface/formquanlyhoadon.php");
     }elseif($quanLy == 'QLKhach'){

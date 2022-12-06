@@ -9,7 +9,7 @@
                   <div class="input-group">
                     <input type="text" id = "search" class="form-control" placeholder="Tìm Kiếm...">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Tìm</button>
+                      <button href="#" class="btn btn-default" type="button">Tìm</button>
                     </span>
                   </div>
                 </div>
@@ -22,6 +22,9 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Bảng Quản Lý Hàng Hoá<small></small></h2>
+                    <div class="col-md-6 text-right">
+			            	<a href="index.php?QL=addsp" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm sản phẩm</a>
+			              </div>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -70,18 +73,18 @@
                             <td class=" "><?php echo $row['masp'] ?></td>
                             <td class="">
                               <div class="anh-sp">
-                                <img src="../images/<?php echo $row['anh'] ?>" alt="" with="90px" height="100px">
+                                <img src="<?php echo $row['anh'] ?>" alt="" with="90px" height="100px">
                               </div>
                             </td>
                             <td class=" "><?php echo $row['tensp'] ?> </td>
                             <td class=" "><?php echo $row['giaban'] ?></td>
                             <td class=" "><?php echo $row['soluongton'] ?></td>
-                            <td class=" "><?php echo $row['mahang'] ?></td>
+                            <td class=" "><?php echo $row['mahangsp'] ?></td>
                             <td class=" "><?php echo $row['maloaisp'] ?></td>
                             <td class=" "><?php echo $row['mota'] ?></td>
                             <td>
                               <a href="index.php?QL=editsp&id=<?php echo $row['masp'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                              <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                              <a href="index.php?QL=deletesp&id=<?php echo $row['masp'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                             </td>
                             </td>
                           </tr>

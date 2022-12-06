@@ -9,7 +9,7 @@
 	<div class="container-fluid ml-2">
 		<div class="row">
 			<div class="col-md-1 text-left">
-				<a href="Admin.php?adminql=product" class="btn btn-sm btn-default"><i class="fas fa-chevron-left"></i></a>
+				<a href="Admin.php?adminql=type" class="btn btn-sm btn-default"><i class="fas fa-chevron-left"></i></a>
 			</div>
 			<div class="col-md-11">
 				<h2 class="text-left text-danger">Sửa sản phẩm</h2>
@@ -23,16 +23,17 @@
 		<?php
 			if(!empty($_POST))
 			{ 
+				$id = $_POST['masp'];
 				$tensp = $_POST['tensp'];
 				
 				if($_FILES['anh']['name'] == '')
 				{
-					$target_fiel = $row['anh'];
+					$target_fiel = $row_spedit['anh'];
 				}
 				else
 				{
 					$hinhanhpart = basename($_FILES['anh']['name']); 
-					$target_dir = "images/";
+					$target_dir = "images1/";
 					$target_fiel = $target_dir . $hinhanhpart;
 				}
 				$maloaisp = $_POST['maloaisp'];
@@ -74,9 +75,9 @@
 				{
 					//kiểm tra file hợp lệ thì lưu vào thư mục.
 					move_uploaded_file($_FILES['anh']['tmp_name'], $target_fiel);
-					$sql=" UPDATE sanpham SET tensp = '$tensp', anh = '$target_fiel' , maloaisp = '$maloaisp', giaban = '$giaban', mota = '$mota' WHERE masp = '$id'";
+					$sql=" UPDATE sanpham SET masp = '$id', tensp = '$tensp', anh = '$target_fiel' , maloaisp = '$maloaisp', giaban = '$giaban', mota = '$mota' WHERE masp = '$id'";
 					$run=mysqli_query($conn, $sql);
-					header('location:index.php?QL=QLLoaiHangHoa');
+					header('location:index.php?QL=QLHangHoa');
 					//$conn->close();
 				}
 				else
@@ -114,7 +115,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="exampleInputEmail1" class="form-label">Số lượng tồn</label>
-				<input type="text" class="form-control" value="<?php echo $row['soluongton']  ?>"  name="mota">
+				<input type="text" class="form-control" value="<?php echo $row['soluongton']  ?>"  name="soluongton">
 			</div>
 			<button type="submit" class="btn btn-primary">Sửa</button>
 			</form> 
