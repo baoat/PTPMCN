@@ -33,7 +33,7 @@
 			else
 			{
 				$hinhanhpart = basename($_FILES['hinhanh']['name']); 
-				$target_dir = "images/";
+				$target_dir = "images1/";
 				$target_fiel = $target_dir . $hinhanhpart;
 			}
 			
