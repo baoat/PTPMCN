@@ -119,15 +119,16 @@ $row = mysqli_fetch_array($query);
 				$action = isset($_GET['action']) ? $_GET['action'] : '';
 					if($action == 'danhgia') {
 						if(isset($_POST['submit'])) {
-							$sao = $_POST['sao'];
-							$ma_khachhang = $_SESSION['ma_user'];
-							$ngaydanhgia = date('y/m/d');
-							$noidung = $_POST['noidung'];
-							$id_sanpham = $row['masp'];
-							if($sao == NULL) {
-								$_SESSION['error'] = 'Vui lòng nhập sao đánh giá';
-								header('location: ChiTietSanPham.php?showChitiet=chiTiet&action=danhgia&chiTiet='.$id.'');
+							if(!isset($_POST['sao'])) {
+								?>
+								<span style="color:red;">Vui lòng nhập số sao đánh giá.</span>
+								<?php
 							} else {
+								$sao = $_POST['sao'];
+								$ma_khachhang = $_SESSION['ma_user'];
+								$ngaydanhgia = date('y/m/d');
+								$noidung = $_POST['noidung'];
+								$id_sanpham = $row['masp'];
 								$sql = "INSERT INTO chitietdanhgia(ngaydanhgia, id_user, id_sanpham, sosaodanhgia, noidungdanhgia) VALUES ('$ngaydanhgia', '$ma_khachhang', '$id_sanpham', '$sao', '$noidung')";
 								$query = mysqli_query($conn, $sql);
 								header('location: ChiTietSanPham.php?showChitiet=chiTiet&action=danhgia&chiTiet='.$id.'');
