@@ -117,8 +117,7 @@ $row = mysqli_fetch_array($query);
 			?>
 			<?php
 				$action = isset($_GET['action']) ? $_GET['action'] : '';
-				switch($action) {
-					case 'danhgia':
+					if($action == 'danhgia') {
 						if(isset($_POST['submit'])) {
 							$sao = $_POST['sao'];
 							$ma_khachhang = $_SESSION['ma_user'];
@@ -133,42 +132,43 @@ $row = mysqli_fetch_array($query);
 								$query = mysqli_query($conn, $sql);
 								header('location: ChiTietSanPham.php?showChitiet=chiTiet&action=danhgia&chiTiet='.$id.'');
 							}
-							
 						}
-						break;
-					case 'xoadanhgia':
+							?>
+
+						<div class=" form-danh-gia ">
+							<form action="" method="post">
+								<div class="input-sao">
+								<span>Chọn số sao: </span>
+								<?php
+									for ($i=1; $i <= 5; $i++) { 
+										?>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" value="<?php echo $i ?>" name="sao" id="sao">
+											<label class="form-check-label" for="sao">
+												<?php echo $i  ?>
+											</label>
+										</div>
+										<?php
+									}
+								?>
+								</div>
+								<div class="input-danh-gia">
+									<div class="search-form">
+										<input class="form-control me-2" type="text" placeholder="" name="noidung" id="noidung"	>
+										<button class="btn btn-outline-success" type="submit" name="submit" id="submit">Gửi</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					<?php
+					} elseif($action == 'xoadanhgia') {
 						$id_xoadanhgia = isset($_GET['id_xoadanhgia']) ? $_GET['id_xoadanhgia'] : '';
 						$sql_xoadanhgia = "DELETE FROM chitietdanhgia WHERE id = '".$id_xoadanhgia."'";
 						$query_xoadanhgia = mysqli_query($conn, $sql_xoadanhgia);
 						header('location: ChiTietSanPham.php?showChitiet=chiTiet&chiTiet='.$_GET['chiTiet'].'');
-						break;
-				}
+					}
+						
 					?>
-					<div class=" form-danh-gia ">
-                        <form action="" method="post">
-                            <div class="input-sao">
-                            <span>Chọn số sao: </span>
-                            <?php
-                                for ($i=1; $i <= 5; $i++) { 
-                                    ?>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" value="<?php echo $i ?>" name="sao" id="sao">
-                                        <label class="form-check-label" for="sao">
-                                            <?php echo $i  ?>
-                                        </label>
-                                    </div>
-                                    <?php
-                                }
-                            ?>
-                            </div>
-                            <div class="input-danh-gia">
-								<div class="search-form">
-									<input class="form-control me-2" type="text" placeholder="" name="noidung" id="noidung"	>
-									<button class="btn btn-outline-success" type="submit" name="submit" id="submit">Gửi</button>
-								</div>
-                            </div>
-                        </form>
-                    </div>
 		</div>
 		<div class="flex lien-quan ">
 			<div class="container-fluid">
@@ -187,11 +187,7 @@ $row = mysqli_fetch_array($query);
 							<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanphamlienquan['masp'] ?>">
 								<div class="show-sanpham-1">
 									<div class="img-show-sanpham">
-<<<<<<< HEAD
 										<img src="<?php echo $row_sanphamlienquan['anh'] ?>" />
-=======
-										<img src="admin/<?php echo $row_sanphamlienquan['anh'] ?>" />
->>>>>>> 6d6db17ac52fa3631d1712fdb2d9783a67512b0f
 									</div>
 									<div class="name-show-sanpham">
 										<p style="color: black; margin-top:5px;"><?php echo $row_sanphamlienquan['tensp'] ?></p>
