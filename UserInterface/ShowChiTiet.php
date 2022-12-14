@@ -164,7 +164,7 @@ $row = mysqli_fetch_array($query);
 							<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanphamlienquan['masp'] ?>">
 								<div class="show-sanpham-1">
 									<div class="img-show-sanpham">
-										<img src="images/<?php echo $row_sanphamlienquan['anh'] ?>" />
+										<img src="admin/<?php echo $row_sanphamlienquan['anh'] ?>" />
 									</div>
 									<div class="name-show-sanpham">
 										<p style="color: black; margin-top:5px;"><?php echo $row_sanphamlienquan['tensp'] ?></p>
