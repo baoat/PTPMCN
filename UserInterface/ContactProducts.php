@@ -21,7 +21,8 @@
         <?php
         $query="select * from sanpham where tensp like '%$search%' AND soluongton > 0 limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
-    } elseif(isset($_GET['id'])) {
+    } elseif(isset($_GET['id_hangsp'])) {
+		$id = $_GET['id_hangsp'];
         $sql="select * from hangsanpham where mahangsp ='".$id."'";
         $run=mysqli_query($conn, $sql);
         $row=mysqli_fetch_array($run);
@@ -30,7 +31,7 @@
             <span class="text-uppercase"><?php echo $row['tenhangsp'] ?></span>
         </div>
         <?php
-        $query="select * from sanpham where mahang = $id AND soluongton > 0 limit $phantrang, $sosp1trang";
+        $query="select * from sanpham where mahangsp = $id AND soluongton > 0 limit $phantrang, $sosp1trang";
 		$run = mysqli_query($conn, $query);
     } else {
 		?>

@@ -3,7 +3,6 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
-              
               <div class="title_right">
                 <div class="col-md-5 col-sm-5   form-group pull-right top_search">
                   <div class="input-group">
@@ -23,7 +22,7 @@
                   <div class="x_title">
                     <h2>Bảng Quản Lý Hàng Hoá<small></small></h2>
                     <div class="col-md-6 text-right">
-			            	<a href="index.php?QL=addsp" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm sản phẩm</a>
+			            	<a href="index.php?QL=addsp" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>  Thêm sản phẩm</a>
 			              </div>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -73,7 +72,7 @@
                             <td class=" "><?php echo $row['masp'] ?></td>
                             <td class="">
                               <div class="anh-sp">
-                                <img src="<?php echo $row['anh'] ?>" alt="" with="90px" height="100px">
+                                <img src="../<?php echo $row['anh'] ?>" alt="" with="90px" height="100px">
                               </div>
                             </td>
                             <td class=" "><?php echo $row['tensp'] ?> </td>

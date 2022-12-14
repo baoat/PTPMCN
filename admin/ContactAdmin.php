@@ -29,6 +29,8 @@
         include("AdminInterface/Process/TrangThai.php");
     }elseif($quanLy == 'QLHangSp'){
         include("AdminInterface/formquanlyhangsp.php");
+    }elseif($quanLy == 'dangxuatAdmin'){
+        include("AdminInterface/Process/Logout.php");
     }else{
         include('AdminInterface/formhome.php');
     }

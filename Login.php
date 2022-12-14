@@ -93,6 +93,7 @@ session_start();
 									{
 										$_SESSION['login']=$row['name'];
 										$_SESSION['ma_user'] = $row['id'];
+										$_SESSION['avata'] = $row['hinhanh'];
 									
 										header('Location:Index.php');
 									}

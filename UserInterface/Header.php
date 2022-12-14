@@ -18,7 +18,7 @@ session_start();
                                 if(isset($_SESSION['login'])) {
                                     ?>
                                     <li class="nav-item dropdown">
-                                <img src="#" width="35" height="35">
+                                <img src="<?php echo $_SESSION['avata']; ?>" width="35" height="35">
                                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <?php
                                             echo $_SESSION['login'];
@@ -79,7 +79,7 @@ session_start();
                                             while($row = mysqli_fetch_array($query)) {
                                         ?>
                                             
-                                                <a href="Index.php?showSanpham=hangsp&id=<?php echo $row['mahangsp'] ?>"><?php echo $row['tenhangsp'] ?></a>
+                                                <a href="Index.php?showSanpham=hangsp&id_hangsp=<?php echo $row['mahangsp'] ?>"><?php echo $row['tenhangsp'] ?></a>
                                             
                                         <?php    
                                             }

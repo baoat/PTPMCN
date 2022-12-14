@@ -8,19 +8,21 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>SAPO.vn</span></a>
+              <a href="index.php" class="site_title"><span>SAPO.vn</span></a>
             </div>
 
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix">
+            <div class="profile clearfix" style="display:flex; align-items: center;">
               <div class="profile_pic">
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Xin Chào,</span>
-                <h2>ADMIN</h2>
+                <h2><?php
+                        echo $_SESSION['login_Admin'];
+                      ?>
+                </h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -42,21 +44,7 @@
                       <li><a href="index.php?QL=QLHoaDon">Quản Lý Hoá Đơn</a></li>
                       <li><a href="index.php?QL=QLLoaiHangHoa">Quản Lý Loại Sản Phẩm </a></li>
                       <li><a href="index.php?QL=QLHangSp">Quản Lý Hãng Sản Phẩm</a></li>
-                      <li><a href="index.php?QL=QLHangHoa">chờ thêm chức năng mới</a></li>
                       <li><a href="index.php?QL=QLKhach">Quản Lý Khách</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="phanhoikhachhang.php">Phản hồi của khách hàng</a></li>
-                      <li><a href="tables_dynamic.html">chờ thêm chức năng mới</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> chờ thêm chức năng <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="chartjs.html">chờ thêm chức năng mới</a></li>
-                      <li><a href="chartjs2.html">chờ thêm chức năng mới</a></li>
-                      <li><a href="morisjs.html">chờ thêm chức năng mới</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -89,7 +77,7 @@
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Thoát </a>
+                    <a class="dropdown-item"  href="index.php?QL=dangxuatAdmin&dangxuatAdmin=1"><i class="fa fa-sign-out pull-right"></i> Thoát </a>
                   </div>
                 </li>
 

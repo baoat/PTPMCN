@@ -30,7 +30,7 @@ if(!isset($_SESSION))
                             <a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanpham['masp'] ?>" class="san-pham-don-hang">
                                 <div class=" row show-san-pham-don-hang">
                                     <div class="img-san-pham-don-hang">
-                                        <img src="images/<?php echo $row_sanpham['anh'];  ?>" alt="">
+                                        <img src="<?php echo $row_sanpham['anh'];  ?>" alt="">
                                     </div>
                                     <div class="thong-tin-san-pham-don-hang">
                                         <div class="ten-san-pham-don-hang">
@@ -95,7 +95,8 @@ if(!isset($_SESSION))
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Trở về</button>
-                                        <a class="btn btn-danger" href="DonHang.php?huydon=<?php echo $row['ma_hoadon'] ?>">Hủy</a>
+                                        
+                                        <a class="btn btn-danger" href="DonHang.php?huydon=<?php echo $row['ma_hoadon'] +1 ;  ?>">Hủy</a>
                                     </div>
                                 </div>
                             </div>

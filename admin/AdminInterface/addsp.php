@@ -78,7 +78,7 @@
 
 	<div class="row">
 		<div class="col-md-1 text-left">
-			<a href="Admin.php?adminql=product" class="btn btn-sm btn-default"><i class="fas fa-chevron-left"></i></a>
+			<a href="index.php?QL=QLHangHoa" class="btn btn-sm btn-default"><i class="fas fa-chevron-left"></i></a>
 		</div>
 		<div class="col-md-11">
 			<h2 class="text-left text-danger">Thêm sản phẩm</h2>

@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/StyleUserInterface.css">
-	<link rel="stylesheet" href="css/StyleChiTiet.css">
+	<link rel="stylesheet" href="css/ChiTiet.css">
 	<!-- jQuery -->
 	<script src="//code.jquery.com/jquery.js"></script>
 	<!-- Bootstrap JavaScript -->

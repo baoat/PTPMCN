@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+.comment {
+    display: flex;
+    align-items: center;
+}
+
 span.sao-chuan {
     color: #ffc107;
 }
@@ -27,12 +32,17 @@ span.sao-chuan {
 }
 
 .avata-nguoi-dung {
-    width: 6%;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
     border-radius: 50%;
+    display: flex;
+    margin-top: -5px;
 }
 
 .noi-dung-danh-gia {
     padding-left: 66px;
+    width: 50%;
 }
 
 .ngay-danh-gia {
