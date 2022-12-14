@@ -19,11 +19,7 @@
 				<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row['masp'] ?>">
 					<div class="show-sanpham-1">
 						<div class="img-show-sanpham">
-<<<<<<< HEAD
 							<img src="<?php echo $row['anh'] ?>" />
-=======
-							<img src="admin/<?php echo $row['anh'] ?>" />
->>>>>>> 6d6db17ac52fa3631d1712fdb2d9783a67512b0f
 						</div>
 						<div class="name-show-sanpham">
 							<p style="color: black; margin-top:5px;"><?php echo $row['tensp'] ?></p>
