@@ -2,6 +2,8 @@
  $sqlloaisp ="select * from loaisanpham";
  $queryloaisp =mysqli_query($conn,$sqlloaisp);
  
+ $sqlhangsp ="select * from hangsanpham";
+ $queryhangsp =mysqli_query($conn,$sqlhangsp);
 
  //kiểm tra
  if(isset($_POST['submit'])){
@@ -10,12 +12,7 @@
 	$mota =$_POST['mota'];
 	$soluongton =$_POST['soluongton'];
 
-	// if($_FILES['anh']['name']==''){
-	// 	$error_anh_sp='<span style ="color :red;">(*)</span>';
-	// }else{
-	// 	$anh=$_FILES['anh']['name'];
-	// 	$tmp_name = $_FILES['anh']['tmp_name'];
-	// }
+	
 	if($_FILES['anh']['name'] == '')
 				{
 					$target_fiel = $row_spedit['anh'];
@@ -61,8 +58,13 @@
 	}else{
 		$maloaisp =$_POST['maloaisp'];
 	}
+	if($_POST['mahangsp']=='unselect'){
+		echo "bạn chưa chọn loại sản phẩm";
+	}else{
+		$mahangsp =$_POST['mahangsp'];
+	}
 	
-		$mahang =$_POST['mahangsp'];
+		// $mahang =$_POST['mahangsp'];
 	
 
 
@@ -118,10 +120,22 @@
 				<?php }?>
 			</select>
 		  </div>
+
 		  <div class="mb-3">
-		    <label for="exampleInputEmail1" class="form-label">hãng sản phẩm</label>
-		    <input type="text" name="mahangsp" class="form-control"  name="soluongton">
+		    <label for="exampleInputEmail1" class="form-label">Hãng sản phẩm</label>
+		    <select name="mahangsp">
+				<option value="unselect" selected>Lựa chọn hãng sản phẩm</option>
+				<?php 
+				while ($rowhangsp = mysqli_fetch_array($queryhangsp)) {
+				?>
+				<option value="<?php echo $rowhangsp['mahangsp']; ?>"><?php echo $rowhangsp['tenhangsp']; ?> </option>
+				<?php }?>
+			</select>
 		  </div>
+		  <!-- <div class="mb-3">
+		    <label for="exampleInputEmail1" class="form-label">hãng sản phẩm</label>
+		    <input type="text" name="mahangsp" class="form-control"  name="mahangsp">
+		  </div> -->
 
 
 

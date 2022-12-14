@@ -12,7 +12,7 @@ $row = mysqli_fetch_array($query);
 		<div class=" flex san-pham-chi-tiet">
 			<div class="img-san-pham">
 				<div class="img">
-					<img src="images/<?php echo $row['anh'] ?>" class="img-1">
+					<img src="admin/<?php echo $row['anh'] ?>" class="img-1">
 				</div>
 			</div>
 			<div class="chi-tiet-san-pham">

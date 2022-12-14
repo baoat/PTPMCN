@@ -21,6 +21,9 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Bảng Quản Lý Hãng Sản Phẩm<small></small></h2>
+                    <div class="col-md-6 text-right">
+			            	<a href="index.php?QL=addhangsp" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm hãng sản phẩm</a>
+			              </div>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -65,8 +68,8 @@
                             <td class=" "><?php echo $row['tenhangsp'] ?> </td>
                             <td class=" "><?php echo $row['maloaisp'] ?></td>
                             <td>
-                              <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                              <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                              <a href="index.php?QL=edithangsp&id=<?php echo $row['mahangsp'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                              <a onclick="return Delete('<?php echo $row['tenhangsp']; ?>')" href="index.php?QL=deletehangsp&id=<?php echo $row['mahangsp'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                             </td>
                             </td>
                           </tr>
@@ -84,7 +87,11 @@
             </div>
           </div>
         </div>
-             
+        <script>
+              function Delete(name) {
+                return confirm("Bạn chắc chắn muốn xoá :" +name+ "?");
+              }
+             </script>  
         <!-- /page content -->
 
         
