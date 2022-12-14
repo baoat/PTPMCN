@@ -12,7 +12,11 @@ $row = mysqli_fetch_array($query);
 		<div class=" flex san-pham-chi-tiet">
 			<div class="img-san-pham">
 				<div class="img">
+<<<<<<< HEAD
 					<img src="<?php echo $row['anh'] ?>" class="img-1">
+=======
+					<img src="admin/<?php echo $row['anh'] ?>" class="img-1">
+>>>>>>> 6d6db17ac52fa3631d1712fdb2d9783a67512b0f
 				</div>
 			</div>
 			<div class="chi-tiet-san-pham">
@@ -187,7 +191,11 @@ $row = mysqli_fetch_array($query);
 							<a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanphamlienquan['masp'] ?>">
 								<div class="show-sanpham-1">
 									<div class="img-show-sanpham">
+<<<<<<< HEAD
 										<img src="<?php echo $row_sanphamlienquan['anh'] ?>" />
+=======
+										<img src="admin/<?php echo $row_sanphamlienquan['anh'] ?>" />
+>>>>>>> 6d6db17ac52fa3631d1712fdb2d9783a67512b0f
 									</div>
 									<div class="name-show-sanpham">
 										<p style="color: black; margin-top:5px;"><?php echo $row_sanphamlienquan['tensp'] ?></p>

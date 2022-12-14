@@ -19,6 +19,9 @@
             <div class="x_panel">
                 <div class="x_title">
                 <h2>Bảng Quản Lý Hàng Hoá<small></small></h2>
+                <div class="col-md-6 text-right">
+			            	<a href="index.php?QL=addloaisp" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm loại sản phẩm</a>
+			              </div>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -64,7 +67,7 @@
                         
                         <td>
                             <a href="index.php?QL=editloaisp&id=<?php echo $row['maloaisp'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                            <a onclick="return Delete('<?php echo $row['tenloaisp']; ?>')" href="index.php?QL=deleteloaisp&id=<?php echo $row['maloaisp'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                         </td>
                         </td>
                         </tr>
@@ -80,3 +83,8 @@
         </div>
         </div>
     </div>
+    <script>
+              function Delete(name) {
+                return confirm("Bạn chắc chắn muốn xoá :" +name+ "?");
+              }
+             </script>

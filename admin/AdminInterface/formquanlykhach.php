@@ -50,9 +50,9 @@
                             <th class="column-title">Avata</th>
                             <th class="column-title no-link last"><span class="nobr">Chỉnh sửa</span>
                             </th>
-                            <th class="bulk-actions" colspan="7">
+                            <!-- <th class="bulk-actions" colspan="7">
                               <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
-                            </th>
+                            </th> -->
                           </tr>
                         </thead>
                         <tbody>
@@ -73,9 +73,9 @@
                             <td class=" "><?php echo $row['gioitinh'] ?></td>
                             <td class=" "><img src="" alt=""></td>
                             <td>
-                              <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                              <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                              <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                              <!-- <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                              <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a> -->
+                              <a onclick="return Delete('<?php echo $row['email']; ?>')" href="index.php?QL=deletekhachhang&id=<?php echo $row['id'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                             </td>
                             </td>
                           </tr>
@@ -92,5 +92,9 @@
             </div>
           </div>
         </div>
-             
+             <script>
+              function Delete(name) {
+                return confirm("Bạn chắc chắn muốn xoá :" +name+ "?");
+              }
+             </script>
         <!-- /page content -->

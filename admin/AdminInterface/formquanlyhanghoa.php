@@ -83,7 +83,7 @@
                             <td class=" "><?php echo $row['mota'] ?></td>
                             <td>
                               <a href="index.php?QL=editsp&id=<?php echo $row['masp'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                              <a href="index.php?QL=deletesp&id=<?php echo $row['masp'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                              <a onclick="return Delete('<?php echo $row['tensp']; ?>')" href="index.php?QL=deletesp&id=<?php echo $row['masp'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                             </td>
                             </td>
                           </tr>
@@ -114,4 +114,10 @@
             })
           })
         </script>
+
+            <script>
+              function Delete(name) {
+                return confirm("Bạn chắc chắn muốn xoá :" +name+ "?");
+              }
+             </script>  
         <!-- /page content -->
