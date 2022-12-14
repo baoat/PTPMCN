@@ -197,7 +197,7 @@ $row = mysqli_fetch_array($query);
 										<span>₫</span><p style=" margin-top:5px;"><?php echo number_format($row_sanphamlienquan['giaban']) ?></p>
 									</div>
 									<div class="timkiem-lienquan">
-										<a href="Index.php?showSanpham=phantrangloai&id=<?php echo $row_sanphamlienquan['masp'] ?>">Tìm kiếm liên quan</a>  
+										<a href="Index.php?showSanpham=phantrangloai&id=<?php echo $row_sanphamlienquan['masmaloaisp'] ?>">Tìm kiếm liên quan</a>  
 									</div>
 								</div>
 							</a>
