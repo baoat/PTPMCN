@@ -48,7 +48,7 @@ if(isset($_SESSION['login']))
                             <input type="checkbox" />
                         </div>
                         <div class="sanpham">
-                            <a href=""><img src="<?php echo $row['anh'] ?>" width="80" height="80" /></a>
+                            <a href=""><img src="images/<?php echo $row['anh'] ?>" width="80" height="80" /></a>
                             <a href=""><?php echo $row['tensp'] ?></a>
                         </div>
                         <div class="Dongia">

@@ -63,7 +63,7 @@
                         </td>
                         <td class=" "><?php echo $row['maloaisp'] ?></td>
                         <td class=" "><?php echo $row['tenloaisp'] ?> </td>
-                        <td class=" "><img src="../<?php echo $row['hinhanh'] ?>" alt=""  width="90px" height="100px"></td>
+                        <td class=" "><img src="../images/<?php echo $row['hinhanh'] ?>" alt=""  width="90px" height="100px"></td>
                         
                         <td>
                             <a href="index.php?QL=editloaisp&id=<?php echo $row['maloaisp'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>

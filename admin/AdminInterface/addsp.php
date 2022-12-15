@@ -20,7 +20,7 @@
 				else
 				{
 					$hinhanhpart = basename($_FILES['anh']['name']); 
-					$target_dir = "images1";
+					$target_dir = "../images";
 					$target_fiel = $target_dir . $hinhanhpart;
 				}
 					
@@ -69,7 +69,7 @@
 
 
 		//  move_uploaded_file($tmp_name,'images1/');
-		$sql="insert into sanpham(tensp,giaban,mota,soluongton,mahangsp,maloaisp,anh) value('$tensp','$giaban','$mota','$soluongton','$mahang','$maloaisp','$target_fiel')";
+		$sql="insert into sanpham(tensp,giaban,mota,soluongton,mahangsp,maloaisp,anh) value('$tensp','$giaban','$mota','$soluongton','$mahangsp','$maloaisp','$target_fiel')";
 		$query = mysqli_query($conn, $sql);
 		header('location:index.php?QL=QLHangHoa');
 	

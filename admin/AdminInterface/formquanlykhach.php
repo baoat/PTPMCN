@@ -71,7 +71,7 @@
                             <td class=" "><?php echo $row['password'] ?></td>
                             <td class=" "><?php echo $row['diachi'] ?></td>
                             <td class=" "><?php echo $row['gioitinh'] ?></td>
-                            <td class=" "><img src="" alt=""></td>
+                            <td class=" "><img src="../images/<?php echo $row['hinhanh'] ?>" alt=""></td>
                             <td>
                               <!-- <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                               <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a> -->

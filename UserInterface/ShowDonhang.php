@@ -30,7 +30,7 @@ if(!isset($_SESSION))
                             <a href="ChiTietSanPham.php?showChitiet=chiTiet&chiTiet=<?php echo $row_sanpham['masp'] ?>" class="san-pham-don-hang">
                                 <div class=" row show-san-pham-don-hang">
                                     <div class="img-san-pham-don-hang">
-                                        <img src="<?php echo $row_sanpham['anh'];  ?>" alt="">
+                                        <img src="images/<?php echo $row_sanpham['anh'];  ?>" alt="">
                                     </div>
                                     <div class="thong-tin-san-pham-don-hang">
                                         <div class="ten-san-pham-don-hang">

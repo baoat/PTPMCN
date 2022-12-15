@@ -59,7 +59,7 @@
                                     <a href="Index.php?id=<?php echo $row['maloaisp'] ?>">
                                         <div class="show-thanhphan ">
                                             <div class="img-danhmuc-muenu">
-                                                <img class="logo-menu" src="<?php echo $row['hinhanh'] ?> "/>
+                                                <img class="logo-menu" src="images/<?php echo $row['hinhanh'] ?> "/>
                                             </div>
 
                                             <div class="name-danhmuc-menu" style="font-size: 0.84rem"><?php echo $row['tenloaisp'] ?></div>

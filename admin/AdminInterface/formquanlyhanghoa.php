@@ -72,7 +72,7 @@
                             <td class=" "><?php echo $row['masp'] ?></td>
                             <td class="">
                               <div class="anh-sp">
-                                <img src="../<?php echo $row['anh'] ?>" alt="" with="90px" height="100px">
+                                <img src="../images/<?php echo $row['anh'] ?>" alt="" with="90px" height="100px">
                               </div>
                             </td>
                             <td class=" "><?php echo $row['tensp'] ?> </td>
