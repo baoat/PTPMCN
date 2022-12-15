@@ -33,7 +33,7 @@
 				else
 				{
 					$hinhanhpart = basename($_FILES['anh']['name']); 
-					$target_dir = "images1/";
+					$target_dir = "../images/";
 					$target_fiel = $target_dir . $hinhanhpart;
 				}
 				$maloaisp = $_POST['maloaisp'];
